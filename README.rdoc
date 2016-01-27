@@ -1,5 +1,20 @@
 == README
 
+
+=== Smalltalkto.me
+
+what to say, how
+
+==== Presentation Bullet Points
+
+* advice for making conversation with strangers
+* pick a theme (what are the kids into these days?..)
+* related current events and anecdotes.
+* FB integration (who’s who)
+* reviews
+* abort button
+
+
 This README would normally document whatever steps are necessary to get the
 application up and running.
 
