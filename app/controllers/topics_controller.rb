@@ -7,7 +7,9 @@ class TopicsController < ApplicationController
 
   def show
 
+    @content = RedditScraper.new.scrape
     @topic = Topic.find(params[:id])
+    
   end
 
 end
