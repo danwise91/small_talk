@@ -1,2 +1,7 @@
 <h1> Welcome To Small Talk </h1>
 
+<ul>
+  <% @topics.each do |topic| %>
+  <li><%= link_to topic.name, topic_path(topic) %></li>
+  <% end %>
+</ul>
