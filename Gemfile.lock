@@ -75,11 +75,13 @@ GEM
     multi_json (1.11.2)
     nokogiri (1.6.7.2)
       mini_portile2 (~> 2.0.0.rc2)
+    open_uri_redirections (0.2.1)
     pg (0.18.4)
     pry (0.10.3)
       coderay (~> 1.1.0)
       method_source (~> 0.8.1)
       slop (~> 3.4)
+
     pry-rails (0.3.4)
       pry (>= 0.9.10)
     rack (1.6.4)
@@ -160,8 +162,13 @@ DEPENDENCIES
   coffee-rails (~> 4.1.0)
   jbuilder (~> 2.0)
   jquery-rails
+  open_uri_redirections
   pg (~> 0.15)
+<<<<<<< HEAD
   pry-rails
+=======
+  pry
+>>>>>>> reddit-scraper
   rails (= 4.2.5.1)
   rails_12factor
   sass-rails (~> 5.0)
