@@ -2,3 +2,10 @@
 
 
   <h1><%= @topic.name %></h1>
+
+
+  <ul>
+    <% @content.each do |k, v| %>
+    <li><%= link_to k, v %></li>
+    <% end %>
+  </ul>

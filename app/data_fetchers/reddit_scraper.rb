@@ -18,19 +18,16 @@ class RedditScraper
   	content_hash = {}
 
   	# this is very specific to reddit!!
-  	
+
 
   	self.html.css(".title").each_with_index do |post, index|
-  		# binding.pry
   		if post.name == "p" && index > 3
 	  		link = post.children[0].attributes["href"].value
 	  		title = post.children[0].text
 	  		content_hash[title] = link
-	  		# binding.pry
 	  	end
+
   	end
+		content_hash
   end
 end
-
-scraper = RedditScraper.new
-scraper.scrape
