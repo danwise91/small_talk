@@ -3,28 +3,24 @@ require 'open-uri'
 require 'pry'
 
 class RedditScraper
-	attr_accessor :html
+	attr_accessor :html, :url
 
 
-  def initialize(url)
-    @url = "https://www.reddit.com"
-    begin
-      file = open(url, :allow_redirections => :all)
-      doc = Nokogiri::HTML(file) do
-        @html = Nokogiri::HTML(open(url, :allow_redirections => :all))
-      end
-    rescue OpenURI::HTTPError => e 
-      if e.message == "404 Not Found"
-        puts "Your tag is not valid"
-        DeadspinRunner.new.call
-      else
-        raise e
-      end
-    end
+  def initialize
+  	# we will update this dynamically later with initialize taking a url argument that depends on what kind of party the user is going to. For now we'll just use TIL sub
+    url = "https://www.reddit.com/r/todayilearned"
+    file = open(url)
+    doc = Nokogiri::HTML(file)
+    @html = Nokogiri::HTML(open(url))
   end
 
   def scrape
   	binding.pry
+  	self.html.css(".title").each do |post|
+  		puts post.text
+  	end
   end
-
 end
+
+scraper = RedditScraper.new
+scraper.scrape
