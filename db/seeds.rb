@@ -6,6 +6,10 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-Theme.create(name: "hipster")
-Theme.create(name: "goth")
-Theme.create(name: "gamer")
+hipster = Theme.create(id: 1, name: "hipster")
+goth = Theme.create(id: 2, name: "goth")
+gamer = Theme.create(id: 3, name: "gamer")
+
+# hipster subreddits
+beard = Subreddit.create(id: 1, url: "https://www.reddit.com/r/BeardTalk", theme: hipster)
+starbucks = Subreddit.create(id: 2, url: "https://www.reddit.com/r/starbucks", theme: hipster)

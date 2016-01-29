@@ -7,8 +7,8 @@ class ThemesController < ApplicationController
 
   def show
 
-    @content = RedditScraper.new.scrape
     @theme = Theme.find(params[:id])
+    @content = RedditScraper.new(@theme.id).scrape
 
   end
 
