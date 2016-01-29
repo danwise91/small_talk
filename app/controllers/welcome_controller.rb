@@ -1,7 +1,7 @@
 class WelcomeController < ApplicationController
-  
+
   def index
-    @topics = Topic.all
+    @themes = Theme.all
   end
 
 end
