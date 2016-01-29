@@ -21,6 +21,13 @@ ActiveRecord::Schema.define(version: 20160129155025) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "subreddits", force: :cascade do |t|
+    t.string  "url"
+    t.integer "theme_id"
+  end
+
+  add_index "subreddits", ["theme_id"], name: "index_subreddits_on_theme_id", using: :btree
+
   create_table "themes", force: :cascade do |t|
     t.string   "name"
     t.datetime "created_at", null: false
