@@ -14,6 +14,8 @@ sports_fans = Theme.create(name: "sports fans")
 bored_housewives = Theme.create(name: "bored housewives")
 history_nerds = Theme.create(name: "history nerds")
 science_nerds = Theme.create(name: "science nerds")
+general = Theme.create(name: "general")
+
 
 
 # hipster subreddits
@@ -29,5 +31,7 @@ sports_trivia = Subreddit.create(url: "https://www.reddit.com/r/sportstrivia", t
 housekeeping = Subreddit.create(url: "https://www.reddit.com/r/housekeeping", theme: bored_housewives)
 #history nerds subreddits
 historyanecdotes = Subreddit.create(url: "https://www.reddit.com/r/historyanecdotes", theme: history_nerds)
-#science nerds subreddits 
+#science nerds subreddits
 til_science = Subreddit.create(url: "https://www.reddit.com/r/TILScience", theme: science_nerds)
+#general subreddits
+til = Subreddit.create(url: "https://www.reddit.com/r/todayilearned", theme: general)
