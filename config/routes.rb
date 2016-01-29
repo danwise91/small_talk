@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   root "welcome#index"
 
-  resources :topics, only: [:index, :show]
+  resources :themes, only: [:index, :show]
 
 
 end
