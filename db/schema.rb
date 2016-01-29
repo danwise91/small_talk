@@ -11,10 +11,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160129010957) do
+ActiveRecord::Schema.define(version: 20160129154254) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "subreddits", force: :cascade do |t|
+    t.string  "url"
+    t.integer "theme_id"
+  end
+
+  add_index "subreddits", ["theme_id"], name: "index_subreddits_on_theme_id", using: :btree
 
   create_table "themes", force: :cascade do |t|
     t.string   "name"

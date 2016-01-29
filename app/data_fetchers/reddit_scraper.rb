@@ -5,10 +5,20 @@ require 'pry'
 class RedditScraper
 	attr_accessor :html, :url
 
-
-  def initialize
+  def initialize(theme_id)
   	# we will update this dynamically later with initialize taking a url argument that depends on what kind of party the user is going to. For now we'll just use TIL sub
-    url = "https://www.reddit.com/r/todayilearned"
+    case theme_id
+	    
+	    when 1
+	    	# hipster
+	    	url = Subreddit.where(theme_id: 1).sample.url
+	    when 2
+	    	# goth
+	    	url = Subreddit.where(theme_id: 2).sample.url
+	    	# etc..
+	    end
+
+
     file = open(url)
     doc = Nokogiri::HTML(file)
     @html = Nokogiri::HTML(open(url))
