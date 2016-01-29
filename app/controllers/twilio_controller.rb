@@ -20,19 +20,20 @@ class TwilioController < ApplicationController
 
   # Hande a POST from our web form and connect a call via REST API
   def call
-    binding.pry
+    # binding.pry
     contact = Contact.new
     contact.phone = params[:phone]
 
     # Validate contact
-    if contact.valid?
+      if true
+    # if contact.valid?
 
       @client = Twilio::REST::Client.new @@twilio_sid, @@twilio_token
       # Connect an outbound call to the number submitted
       @call = @client.account.calls.create(
         :from => @@twilio_number,
         :to => contact.phone,
-        :url => "#{root_url}connect" # Fetch instructions from this URL when the call connects
+        :url => "https://demo.twilio.com/welcome/voice/" # Fetch instructions from this URL when the call connects
       )
 
       # Lets respond to the ajax call with some positive reinforcement
