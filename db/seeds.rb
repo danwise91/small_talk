@@ -1,6 +1,7 @@
-# maybe we should manually set the ids because they keep incrementing and breaking shit unpredictably. 
+# maybe we should manually set the ids because they keep incrementing and breaking shit unpredictably.
 # or maybe there's a better way to deal with this that i don't know about
-
+Theme.delete_all
+Subreddit.delete_all
 
 hipster = Theme.create(id: 1, name: "hipster")
 goth = Theme.create(id: 2, name: "goth")
@@ -17,7 +18,7 @@ general = Theme.create(id: 10, name: "general")
 beard = Subreddit.create(id: 1, url: "https://www.reddit.com/r/BeardTalk", theme: hipster)
 starbucks = Subreddit.create(id: 2, url: "https://www.reddit.com/r/starbucks", theme: hipster)
 #pretentious subreddits
-obscure_knowledge = Subreddit.create(id: 3, url: "https://www.reddit.com/r/obscureknowledge", theme: pretentious)
+obscure_knowledge = Subreddit.create(id: 3, url: "https://www.reddit.com/r/crappydesign", theme: pretentious)
 #classy drinkers subreddits
 classic_cocktails = Subreddit.create(id: 4, url: "https://www.reddit.com/r/classiccocktails", theme: classy_drinkers)
 #sports fan subreddits
@@ -25,8 +26,10 @@ sports_trivia = Subreddit.create(id: 5, url: "https://www.reddit.com/r/sportstri
 #bored housewives subreddits
 housekeeping = Subreddit.create(id: 6, url: "https://www.reddit.com/r/housekeeping", theme: bored_housewives)
 #history nerds subreddits
-historyanecdotes = Subreddit.create(id: 7, url: "https://www.reddit.com/r/historyanecdotes", theme: history_nerds)
+historyanecdotes = Subreddit.create(id: 7, url: "https://www.reddit.com/r/askhistory", theme: history_nerds)
 #science nerds subreddits
 til_science = Subreddit.create(id: 8, url: "https://www.reddit.com/r/TILScience", theme: science_nerds)
 #general subreddits
 til = Subreddit.create(id: 9, url: "https://www.reddit.com/r/todayilearned", theme: general)
+goth = Subreddit.create(id: 10, url: "https://www.reddit.com/r/goth/", theme: goth)
+gamer = Subreddit.create(id: 11, url: "https://www.reddit.com/r/aww/", theme: gamer)
