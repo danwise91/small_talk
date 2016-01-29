@@ -1,4 +1,4 @@
-
+require 'twilio-ruby'
 class TwilioController < ApplicationController
   # Before we allow the incoming request to connect, verify
   # that it is a Twilio request
@@ -9,6 +9,8 @@ class TwilioController < ApplicationController
   # Define our Twilio credentials as instance variables for later use
   @@twilio_sid = ENV['TWILIO_ACCOUNT_SID']
   @@twilio_token = ENV['TWILIO_AUTH_TOKEN']
+  # @@twilio_number = 14155992671
+  # @@twilio_number = 18023718774
   @@twilio_number = ENV['TWILIO_NUMBER']
 
   # Render home page
@@ -18,6 +20,7 @@ class TwilioController < ApplicationController
 
   # Hande a POST from our web form and connect a call via REST API
   def call
+    binding.pry
     contact = Contact.new
     contact.phone = params[:phone]
 
@@ -81,3 +84,4 @@ class TwilioController < ApplicationController
       false
     end
   end
+end
