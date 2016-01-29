@@ -1,6 +1,6 @@
 $(function(){
   $("#contactform").on('submit', function(e) {
-      // debugger
+      debugger
     // Prevent form submission and repeat clicks
     e.preventDefault();
     e.stopPropagation();
