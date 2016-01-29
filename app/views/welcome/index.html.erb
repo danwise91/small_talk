@@ -1,6 +1,7 @@
 <h1> Welcome To Small Talk </h1>
 
 <h3>Some General Tips </h3>
+<div class="">
 
 <ul>
 
@@ -17,9 +18,18 @@
   </li><br>
 
 </ul>
+</div>
+
+<div class="">
 
 <ul>
   <% @themes.each do |theme| %>
   <li><%= link_to theme.name, theme_path(theme) %></li>
   <% end %>
 </ul>
+</div>
+
+<div class="">
+  <%= button_to "abort", twilio_path, method: :get %>
+
+</div>
