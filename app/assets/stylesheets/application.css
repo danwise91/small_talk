@@ -13,3 +13,41 @@
  *= require_tree .
  *= require_self
  */
+
+@import url(https://fonts.googleapis.com/css?family=Alegreya+Sans);
+
+body {
+  background-color: #4B7399;
+  font-family: 'Alegreya Sans', sans-serif;
+  font-size: 14px;
+}
+
+a {
+  color: #0000FF;
+}
+
+h1 {
+	text-align: center;
+	color: white;
+}
+
+h3 {
+	text-align: center;
+	color: white;
+}
+
+#container {
+  width: 75%;
+  margin: 0 auto;
+  background-color: #FFF;
+  padding: 20px 40px;
+  border: solid 1px black;
+  margin-top: 20px;
+}
+
+.clear {
+  clear: both;
+  height: 0;
+  overflow: hidden;
+}
+
