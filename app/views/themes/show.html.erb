@@ -1,11 +1,9 @@
+<h1><%= @theme.name %></h1>
 
-
-
-  <h1><%= @theme.name %></h1>
-
-
+<div id="container">
   <ul>
     <% @content.each do |k, v| %>
     <li><%= link_to k, v %></li>
     <% end %>
   </ul>
+</div>
