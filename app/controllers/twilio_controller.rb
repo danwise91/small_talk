@@ -9,8 +9,7 @@ class TwilioController < ApplicationController
   # Define our Twilio credentials as instance variables for later use
   @@twilio_sid = ENV['TWILIO_ACCOUNT_SID']
   @@twilio_token = ENV['TWILIO_AUTH_TOKEN']
-  # @@twilio_number = 14155992671
-  # @@twilio_number = 18023718774
+
   @@twilio_number = ENV['TWILIO_NUMBER']
 
   # Render home page
@@ -20,9 +19,9 @@ class TwilioController < ApplicationController
 
   # Hande a POST from our web form and connect a call via REST API
   def call
-    # binding.pry
     contact = Contact.new
     contact.phone = params[:phone]
+    # binding.pry
 
     # Validate contact
       if true
@@ -33,7 +32,7 @@ class TwilioController < ApplicationController
       @call = @client.account.calls.create(
         :from => @@twilio_number,
         :to => contact.phone,
-        :url => "https://demo.twilio.com/welcome/voice/" # Fetch instructions from this URL when the call connects
+        :url => "#{root_url}connect" # Fetch instructions from this URL when the call connects
       )
 
       # Lets respond to the ajax call with some positive reinforcement
