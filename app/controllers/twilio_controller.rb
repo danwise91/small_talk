@@ -40,7 +40,6 @@ class TwilioController < ApplicationController
       @msg = { :message => 'Phone call incoming!', :status => 'ok' }
 
     else
-
       # Oops there was an error, lets return the validation errors
       @msg = { :message => contact.errors.full_messages, :status => 'ok' }
     end
