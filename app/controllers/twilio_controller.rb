@@ -56,7 +56,6 @@ class TwilioController < ApplicationController
     # Our response to this request will be an XML document in the "TwiML"
     # format. Our Ruby library provides a helper for generating one
     # of these documents
-    binding.pry
     response = Twilio::TwiML::Response.new do |r|
       r.Say 'If this were a real click to call implementation, you would be connected to an agent at this point.', :voice => 'alice'
     end
