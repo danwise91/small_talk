@@ -2,9 +2,8 @@ require 'twilio-ruby'
 class TwilioController < ApplicationController
   # Before we allow the incoming request to connect, verify
   # that it is a Twilio request
-  skip_before_action :verify_authenticity_token, only: [:connect, :call]
   before_filter :authenticate_twilio_request, :only => [
-    :connect, :call
+    :connect
   ]
 
   # Define our Twilio credentials as instance variables for later use
@@ -33,7 +32,7 @@ class TwilioController < ApplicationController
       @call = @client.account.calls.create(
         :from => @@twilio_number,
         :to => contact.phone,
-        :url => "https://boiling-atoll-81138.herokuapp.com/connect" # Fetch instructions from this URL when the call connects
+        :url => "http://demo.twilio.com/docs/voice.xml" # Fetch instructions from this URL when the call connects
       )
 
       # Lets respond to the ajax call with some positive reinforcement
