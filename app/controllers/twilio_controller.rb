@@ -4,7 +4,7 @@ class TwilioController < ApplicationController
   # that it is a Twilio request
   skip_before_action :verify_authenticity_token, only: [:connect, :call]
   before_filter :authenticate_twilio_request, :only => [
-    :connect
+    :connect, :call
   ]
 
   # Define our Twilio credentials as instance variables for later use
