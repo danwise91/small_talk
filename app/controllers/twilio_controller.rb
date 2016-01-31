@@ -32,7 +32,7 @@ class TwilioController < ApplicationController
       @call = @client.account.calls.create(
         :from => @@twilio_number,
         :to => contact.phone,
-        :url => "#{root_url}connect" # Fetch instructions from this URL when the call connects
+        :url => "https://boiling-atoll-81138.herokuapp.com/call" # Fetch instructions from this URL when the call connects
       )
 
       # Lets respond to the ajax call with some positive reinforcement
