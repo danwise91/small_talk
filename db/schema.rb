@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160129155025) do
+ActiveRecord::Schema.define(version: 20160131201627) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -28,10 +28,27 @@ ActiveRecord::Schema.define(version: 20160129155025) do
 
   add_index "subreddits", ["theme_id"], name: "index_subreddits_on_theme_id", using: :btree
 
+  create_table "table_themes_tips", force: :cascade do |t|
+    t.integer "tip_id"
+    t.integer "theme_id"
+  end
+
+  add_index "table_themes_tips", ["theme_id"], name: "index_table_themes_tips_on_theme_id", using: :btree
+  add_index "table_themes_tips", ["tip_id"], name: "index_table_themes_tips_on_tip_id", using: :btree
+
   create_table "themes", force: :cascade do |t|
     t.string   "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
+  create_table "tips", force: :cascade do |t|
+    t.string   "description"
+    t.string   "url"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  add_foreign_key "table_themes_tips", "themes"
+  add_foreign_key "table_themes_tips", "tips"
 end
