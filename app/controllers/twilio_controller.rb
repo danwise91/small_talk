@@ -28,7 +28,7 @@ class TwilioController < ApplicationController
 
     # Validate contact
       if true
-      MakeCallJob.set(wait_until: time.minutes.from_now).perform_later(contact.phone, dummy_url)
+      MakeCallJob.set(wait_until: time.minutes.from_now).perform_later(contact.phone, connect_url)
       # MakeCallJob.perform_later(contact.phone, dummy_url)
     # if contact.valid?
 
