@@ -20,6 +20,7 @@ class TwilioController < ApplicationController
 
   # Hande a POST from our web form and connect a call via REST API
   def call
+    time = params[:time]
     contact = Contact.new
     contact.phone = params[:phone]
     # binding.pry
