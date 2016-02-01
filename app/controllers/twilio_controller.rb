@@ -20,7 +20,6 @@ class TwilioController < ApplicationController
 
   # Hande a POST from our web form and connect a call via REST API
   def call
-    binding.pry
     time = params[:time].to_i
     contact = Contact.new
     contact.phone = params[:phone]
@@ -29,7 +28,7 @@ class TwilioController < ApplicationController
 
     # Validate contact
       if true
-      MakeCallJob.set(wait_until: time.minutes.from_now).perform_later(contact.phone, dummy_url)
+      MakeCallJob.set(wait_until: time.minutes.from_now).perform_later(contact.phone, connect_url)
       # MakeCallJob.perform_later(contact.phone, dummy_url)
     # if contact.valid?
 
