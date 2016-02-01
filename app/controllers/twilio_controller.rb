@@ -24,24 +24,25 @@ class TwilioController < ApplicationController
     contact = Contact.new
     contact.phone = params[:phone]
     # binding.pry
-    dummy_url = "http://twimlets.com/holdmusic?Bucket=com.twilio.music.ambient"
+    dummy_url = "http://161464a.ngrok.com/connect"
 
     # Validate contact
       if true
+      MakeCallJob.set(wait_until: time.minutes.from_now).perform_later(contact.phone, dummy_url)
       # MakeCallJob.perform_later(contact.phone, dummy_url)
     # if contact.valid?
 
-      @client = Twilio::REST::Client.new @@twilio_sid, @@twilio_token
-      # Connect an outbound call to the number submitted
-      @call = @client.account.calls.create(
-        :from => @@twilio_number,
-        :to => contact.phone,
-        # :url => "http://161464a.ngrok.com/connect"
-        :url => connect_url
-
-        # Fetch instructions from this URL when the call connects
-        # :url => dummy_url # Fetch instructions from this URL when the call connects
-      )
+      # @client = Twilio::REST::Client.new @@twilio_sid, @@twilio_token
+      # # Connect an outbound call to the number submitted
+      # @call = @client.account.calls.create(
+      #   :from => @@twilio_number,
+      #   :to => contact.phone,
+      #   # :url => "http://161464a.ngrok.com/connect"
+      #   :url => connect_url
+      #
+      #   # Fetch instructions from this URL when the call connects
+      #   # :url => dummy_url # Fetch instructions from this URL when the call connects
+      # )
 
 
       # Lets respond to the ajax call with some positive reinforcement
