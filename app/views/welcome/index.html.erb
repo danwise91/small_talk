@@ -8,7 +8,7 @@
   <ul>
 
     <%= form_tag method: :get do %>
-    <%= select_tag('theme[name]', options_for_select(@themes.collect{ |theme| [theme.name, theme.id] })) %>
+    <%= select_tag('theme[id]', options_for_select(@themes.collect{ |theme| [theme.name, theme.id] })) %>
     <%= submit_tag "Get facts" %>
     <% end %>
   </ul>
