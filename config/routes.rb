@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
   root "welcome#index"
 
-  resources :themes, only: [:index, :show]
+  resources :themes
+  post '/' => 'themes#show'
   # resources :twilio, only: [:index, :show]
 
 

@@ -4,4 +4,5 @@ class WelcomeController < ApplicationController
     @themes = Theme.all
   end
 
+
 end
