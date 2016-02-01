@@ -12,4 +12,5 @@
     Tip:
     <li><%=tip.description %></li>
   </ul>
+  <%= button_to "more info", action: "new", remote: true, theme: {id: @theme.id} %>
 </div>

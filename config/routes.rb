@@ -3,6 +3,7 @@ Rails.application.routes.draw do
 
   resources :themes
   post '/' => 'themes#show'
+  post 'themes/new' => 'themes#show'
   # resources :twilio, only: [:index, :show]
 
 
