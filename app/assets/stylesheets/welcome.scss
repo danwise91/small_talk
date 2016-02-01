@@ -7,7 +7,7 @@
   float: left;
 }
 
-.btn {
+.abort-button {
   background: #e30d0d;
   background-image: -webkit-linear-gradient(top, #e30d0d, #140303);
   background-image: -moz-linear-gradient(top, #e30d0d, #140303);
@@ -30,7 +30,7 @@
 
 }
 
-.btn:hover {
+.abort-button:hover {
   background: #f24b4b;
   background-image: -webkit-linear-gradient(top, #f24b4b, #140e04);
   background-image: -moz-linear-gradient(top, #f24b4b, #140e04);
@@ -40,7 +40,7 @@
   text-decoration: none;
 }
 
-.btn a {
+.abort-button a {
 	color: white;
 	text-decoration: none;
 }
