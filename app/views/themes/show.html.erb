@@ -2,8 +2,14 @@
 
 <div id="container">
   <ul>
-    <% @content.each do |k, v| %>
-    <li><%= link_to k, v %></li>
-    <% end %>
+    Fact:
+    <% x = @content.keys.sample %>
+    <% y = @content[x] %>
+    <% z = x.gsub(/TIL/, "") %>
+    <% z[0].upcase! %>
+    <li><%= link_to z,y, target: "_blank" %></li>
+    <% tip = @tips.sample %>
+    Tip:
+    <li><%=tip.description %></li>
   </ul>
 </div>
