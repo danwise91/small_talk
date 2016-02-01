@@ -3,13 +3,25 @@
 <div id="container">
   <ul>
     Fact:
-    <% x = @content.keys.sample %>
-    <% y = @content[x] %>
-    <% z = x.gsub(/TIL/, "") %>
-    <% z[0].upcase! %>
-    <li><%= link_to z,y, target: "_blank" %></li>
+    <% post_title = @content.keys.sample %>
+    <% post_url = @content[post_title] %>
+    <% formatted_title = post_title.gsub(/TIL/, "") %>
+    <% formatted_title[0].upcase! %>
+
+    <% if post_url.include?("comments") %>
+      <% reddit_post_id = post_url.split('/')[-2] %>
+      <% end %>
+
+    <li><%= link_to formatted_title, post_url, target: "_blank" %></li>
     <% tip = @tips.sample %>
     Tip:
     <li><%=tip.description %></li>
   </ul>
+
+  <%= button_to "Refresh Article and Tip", action: "new", remote: true, theme: {id: @theme.id} %>
+
+  <% if reddit_post_id %>
+    <script src='https://redditjs.com/post.js' data-url="<%= reddit_post_id %>" data-height='500' data-width='650' data-post-finder='mostComments' data-theme='light' data-show-submit='true'></script>
+    <% end %>
+
 </div>
