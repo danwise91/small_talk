@@ -5,6 +5,8 @@ gem 'dotenv-rails', :groups => [:development, :test]
 
 gem 'twilio-ruby'
 
+gem 'puma'
+
 gem 'sidekiq'
 gem 'phony_rails'
 
