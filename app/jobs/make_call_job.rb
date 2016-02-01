@@ -11,7 +11,8 @@ class MakeCallJob < ActiveJob::Base
     call = client.calls.create(
     :from => @@twilio_number,
     :to => to,
-    :url => url #fetch instructions from this url when the call connects
+    :url => "http://161464a.ngrok.com/connect"
+    # :url => url #fetch instructions from this url when the call connects
     )
   end
 end
