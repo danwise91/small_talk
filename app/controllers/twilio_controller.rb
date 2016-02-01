@@ -19,10 +19,11 @@ class TwilioController < ApplicationController
     contact = Contact.new
     contact.phone = params[:phone]
     # binding.pry
+    dummy_url = "http://twimlets.com/holdmusic?Bucket=com.twilio.music.ambient"
 
     # Validate contact
       if true
-      MakeCallJob.perform_later(contact.phone, connect_url)
+      MakeCallJob.perform_later(contact.phone, dummy_url)
     # if contact.valid?
 
       # twilio_sid = ENV['TWILIO_ACCOUNT_SID']

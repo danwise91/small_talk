@@ -11,7 +11,7 @@ class MakeCallJob < ActiveJob::Base
     call = client.calls.create(
     :from => @@twilio_number,
     :to => to,
-    :url => "http://twimlets.com/holdmusic?Bucket=com.twilio.music.ambient"#fetch instructions from this url when the call connects
+    :url => url #fetch instructions from this url when the call connects
     )
   end
 end
