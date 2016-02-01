@@ -2,23 +2,22 @@
 
 
 <div id="container">
+  <div class="btn">
+    <%= link_to "Abort!!", twilio_path, method: :get %>
+  </div>
 
 
   Who are you hanging out with?
   <ul>
+    <div class="form">
 
-    <%= form_tag method: :get do %>
-    <%= select_tag('theme[id]', options_for_select(@themes.collect{ |theme| [theme.name, theme.id] })) %>
-    <%= submit_tag "Get facts" %>
-    <% end %>
+      <%= form_tag method: :get do %>
+      <%= select_tag('theme[id]', options_for_select(@themes.collect{ |theme| [theme.name, theme.id] })) %>
+      <%= submit_tag "Get facts" %>
+      <% end %>
+    </div>
   </ul>
 
 
-
-
-  <div class="btn">
-    <%= link_to "Abort!!", twilio_path, method: :get %>
-
-  </div>
 
 </div>
