@@ -1,9 +1,12 @@
 class TwilioController < ApplicationController
+
   # Before we allow the incoming request to connect, verify
   # that it is a Twilio request
   before_filter :authenticate_twilio_request, :only => [
     :connect
   ]
+
+
 
   # Define our Twilio credentials as instance variables for later use
 
