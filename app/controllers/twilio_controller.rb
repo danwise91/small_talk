@@ -2,10 +2,14 @@ class TwilioController < ApplicationController
 
   # Before we allow the incoming request to connect, verify
   # that it is a Twilio request
+  protect_from_forgery except: :connect
   before_filter :authenticate_twilio_request, :only => [
     :connect
   ]
 
+  @@twilio_sid = ENV['TWILIO_ACCOUNT_SID']
+  @@twilio_token = ENV['TWILIO_AUTH_TOKEN']
+  @@twilio_number = ENV['TWILIO_NUMBER']
 
   # Define our Twilio credentials as instance variables for later use
 
@@ -23,20 +27,21 @@ class TwilioController < ApplicationController
 
     # Validate contact
       if true
-      MakeCallJob.perform_later(contact.phone, dummy_url)
+      # MakeCallJob.perform_later(contact.phone, dummy_url)
     # if contact.valid?
 
-      # twilio_sid = ENV['TWILIO_ACCOUNT_SID']
-      # twilio_token = ENV['TWILIO_AUTH_TOKEN']
-      # twilio_number = ENV['TWILIO_NUMBER']
-      # @client = Twilio::REST::Client.new twilio_sid, twilio_token
-      # # Connect an outbound call to the number submitted
-      # @call = @client.account.calls.create(
-      #   :from => twilio_number,
-      #   :to => contact.phone,
-      #   # :url => "#{connect_url}" # Fetch instructions from this URL when the call connects
-      #   :url => "http://twimlets.com/holdmusic?Bucket=com.twilio.music.ambient" # Fetch instructions from this URL when the call connects
-      # )
+      @client = Twilio::REST::Client.new @@twilio_sid, @@twilio_token
+      # Connect an outbound call to the number submitted
+      @call = @client.account.calls.create(
+        :from => @@twilio_number,
+        :to => contact.phone,
+        # :url => "http://161464a.ngrok.com/connect"
+        :url => connect_url
+
+        # Fetch instructions from this URL when the call connects
+        # :url => dummy_url # Fetch instructions from this URL when the call connects
+      )
+
 
       # Lets respond to the ajax call with some positive reinforcement
       @msg = { :message => 'Phone call incoming!', :status => 'ok' }
@@ -56,11 +61,12 @@ class TwilioController < ApplicationController
   # that is using the web form.  These instructions are used either for a
   # direct call to our Twilio number (the mobile use case) or
   def connect
+
     # Our response to this request will be an XML document in the "TwiML"
     # format. Our Ruby library provides a helper for generating one
     # of these documents
     response = Twilio::TwiML::Response.new do |r|
-      r.Say 'If this were a real click to call implementation, you would be connected to an agent at this point.', :voice => 'alice'
+      r.Say 'This is an emergency please leave the party as quickly as possible. If you see a fire alarm, pull it.', :voice => 'alice'
     end
     render text: response.text
   end
@@ -75,7 +81,7 @@ class TwilioController < ApplicationController
     twilio_signature = request.headers['HTTP_X_TWILIO_SIGNATURE']
 
     # Helper from twilio-ruby to validate requests.
-    @validator = Twilio::Util::RequestValidator.new(twilio_token)
+    @validator = Twilio::Util::RequestValidator.new(@@twilio_token)
 
     # the POST variables attached to the request (eg "From", "To")
     # Twilio requests only accept lowercase letters. So scrub here:
