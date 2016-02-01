@@ -1,3 +1,12 @@
+#container {
+  margin: 0 auto;
+  width:100px;
+}
+
+.form {
+  float: left;
+}
+
 .btn {
   background: #e30d0d;
   background-image: -webkit-linear-gradient(top, #e30d0d, #140303);
@@ -13,6 +22,12 @@
   font-size: 20px;
   padding: 10px 20px 10px 16px;
   text-decoration: none;
+  float: right;
+  width: 100px;
+
+
+
+
 }
 
 .btn:hover {
