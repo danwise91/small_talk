@@ -3,6 +3,8 @@ source 'https://rubygems.org'
 gem 'dotenv-rails', :groups => [:development, :test]
 
 gem 'twilio-ruby'
+
+gem 'sidekiq'
 gem 'phony_rails'
 
 gem "open_uri_redirections"
