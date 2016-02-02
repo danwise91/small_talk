@@ -37,7 +37,7 @@ h3 {
 }
 
 #container {
-  width: 75%;
+  width: 30%;
   margin: 0 auto;
   background-color: #FFF;
   padding: 20px 40px;
@@ -49,5 +49,11 @@ h3 {
   clear: both;
   height: 0;
   overflow: hidden;
+}
+
+.jumbotron {
+    background-color: #4B7399;
+    color: #fff;
+    margin-bottom: 0px;
 }
 
