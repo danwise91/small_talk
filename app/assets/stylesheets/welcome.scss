@@ -1,3 +1,4 @@
+
 .abort-button {
   background: #e30d0d;
   background-image: -webkit-linear-gradient(top, #e30d0d, #140303);
@@ -14,9 +15,9 @@
   padding: 10px 20px 10px 16px;
   text-decoration: none;
   width: 100px;
-  margin-top: 25px;
   margin-bottom: 25px;
-
+  display: block;
+  margin: 0 auto;
 }
 
 .abort-button:hover {
@@ -30,6 +31,6 @@
 }
 
 .abort-button a {
-	color: white;
-	text-decoration: none;
+  color: white;
+  text-decoration: none;
 }
