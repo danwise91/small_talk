@@ -12,6 +12,7 @@ class SessionsController < ApplicationController
   else
     @user = User.new
     flash.now[:error] = "Bad Username or Password"
+    binding.pry
     render :new
   end
   end
