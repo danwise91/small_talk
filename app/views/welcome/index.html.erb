@@ -1,23 +1,32 @@
-<h1> Welcome To Small Talk </h1>
-
-
-<div id="container">
-  <div class="abort-button">
-    <%= link_to "Abort!!", twilio_path, method: :get %>
+<div class="jumbotron text-center">
+    <h1>Small Talk</h1> 
+    <p>We'll make all your wildest dreams come true!</p>
   </div>
 
+<div id="container">
 
   Who are you hanging out with?
   <ul>
-    <div class="form">
+    <div class="form-inline">
 
       <%= form_tag method: :get do %>
       <%= select_tag('theme[id]', options_for_select(@themes.collect{ |theme| [theme.name, theme.id] })) %>
-      <%= submit_tag "Get facts" %>
+          
+      <button type="submit" class="btn btn-danger">Get Advice</button>
+    
       <% end %>
     </div>
   </ul>
+</div>
 
+<div class="abort-button">
+  <%= link_to "Abort!", twilio_path, method: :get %>
+</div>
 
-
+<div class="container-fluid">
+  <p><strong><%= link_to "Our Mission", mission_path %></strong></p>
+  <p><strong><%= link_to "Request a Theme", request_form_path %></strong></p>
+  <p><strong><%= link_to "Careers", careers_path %></strong></p>
+  <p><strong><%= link_to "Customer Support", support_path %></strong></p>
+  <p id="copyright">&copy;2016</p>
 </div>

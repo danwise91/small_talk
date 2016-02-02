@@ -1,8 +1,12 @@
+<%= link_to "Back", root_path %>
+
 <h1><%= @theme.name %></h1>
 
-<div id="container">
+<%= button_to "Refresh Article and Tip", action: "new", remote: true, theme: {id: @theme.id} %>
+
+<div class="container-fluid">
   <ul>
-    Fact:
+    <strong>Custom Conversation Starter:</strong>
     <% post_title = @content.keys.sample %>
     <% post_url = @content[post_title] %>
     <% formatted_title = post_title.gsub(/TIL/, "") %>
@@ -14,14 +18,12 @@
 
     <li><%= link_to formatted_title, post_url, target: "_blank" %></li>
     <% tip = @tips.sample %>
-    Tip:
+    <strong>Tip:</strong>
     <li><%=tip.description %></li>
   </ul>
 
-  <%= button_to "Refresh Article and Tip", action: "new", remote: true, theme: {id: @theme.id} %>
-
   <% if reddit_post_id %>
-    <script src='https://redditjs.com/post.js' data-url="<%= reddit_post_id %>" data-height='500' data-width='650' data-post-finder='mostComments' data-theme='light' data-show-submit='true'></script>
+    <script src='https://redditjs.com/post.js' data-url="<%= reddit_post_id %>" data-height='390' data-width='500' data-post-finder='mostComments' data-theme='light' data-show-submit='true'></script>
     <% end %>
 
 </div>
