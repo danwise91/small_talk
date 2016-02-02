@@ -26,6 +26,10 @@ a {
   color: #0000FF;
 }
 
+#copyright {
+  text-align: center;
+}
+
 h1 {
 	text-align: center;
 	color: white;
@@ -52,8 +56,14 @@ h3 {
 }
 
 .jumbotron {
-    background-color: #4B7399;
-    color: #fff;
-    margin-bottom: 0px;
+  background-color: #4B7399;
+  color: #fff;
+  margin-bottom: -20px;
+}
+
+.container-fluid {
+  padding: 20px 20px;
+  background-color: #4B7399;
+  color: white;
 }
 
