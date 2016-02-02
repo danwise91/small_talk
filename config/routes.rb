@@ -17,4 +17,5 @@ Rails.application.routes.draw do
   get 'request_form' => 'welcome#request_form', as: 'request_form'
   get 'careers' => 'welcome#careers', as: 'careers'
   get 'support' => 'welcome#support', as: 'support'
+  get 'facebook' => 'welcome#facebook', as: 'facebook'
 end
