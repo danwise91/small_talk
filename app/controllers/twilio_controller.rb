@@ -10,6 +10,7 @@ class TwilioController < ApplicationController
   @@twilio_sid = ENV['TWILIO_ACCOUNT_SID']
   @@twilio_token = ENV['TWILIO_AUTH_TOKEN']
   @@twilio_number = ENV['TWILIO_NUMBER']
+  @@twilio_connect_url = ENV['CONNECT_URL']
 
   # Define our Twilio credentials as instance variables for later use
 
@@ -20,15 +21,13 @@ class TwilioController < ApplicationController
 
   # Hande a POST from our web form and connect a call via REST API
   def call
-    time = params[:time].to_i
+    time = params[:time].to_f
     contact = Contact.new
     contact.phone = params[:phone]
-    # binding.pry
-    dummy_url = "http://161464a.ngrok.com/connect"
 
     # Validate contact
       if true
-      MakeCallJob.set(wait_until: time.minutes.from_now).perform_later(contact.phone, connect_url)
+      MakeCallJob.set(wait_until: time.minutes.from_now).perform_later(contact.phone, @@twilio_connect_url)
       # MakeCallJob.perform_later(contact.phone, dummy_url)
     # if contact.valid?
 
