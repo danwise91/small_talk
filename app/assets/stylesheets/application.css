@@ -8,7 +8,8 @@ body {
 
 
 a {
-  color: #0000FF;
+  color: #FFF;
+  text-decoration: none;
 }
 
 #copyright {
@@ -20,9 +21,19 @@ h1 {
 	color: white;
 }
 
+h2 {
+  text-align: center;
+  color: white;
+}
+
 h3 {
 	text-align: center;
 	color: black;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
 }
 
 #container {
@@ -32,7 +43,7 @@ h3 {
   padding: 20px 40px;
   border: solid 1px black;
   margin-top: 20px;
-  margin-bottom: 20px;
+  margin-bottom: 45px;
 }
 
 .clear {
@@ -44,13 +55,14 @@ h3 {
 .jumbotron {
   background-color: #4B7399;
   color: #fff;
-  margin-bottom: -20px;
+  margin-bottom: -40px;
 }
 
 .container-fluid {
   padding: 20px 20px;
   background-color: #4B7399;
   color: white;
+  margin-top: 30px;
 }
 
 

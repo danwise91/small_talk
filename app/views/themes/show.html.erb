@@ -1,4 +1,8 @@
+<%= link_to "Back", root_path %>
+
 <h1><%= @theme.name %></h1>
+
+<%= button_to "Refresh Article and Tip", action: "new", remote: true, theme: {id: @theme.id} %>
 
 <div class="container-fluid">
   <ul>
@@ -19,7 +23,7 @@
   </ul>
 
   <% if reddit_post_id %>
-    <script src='https://redditjs.com/post.js' data-url="<%= reddit_post_id %>" data-height='300' data-width='500' data-post-finder='mostComments' data-theme='light' data-show-submit='true'></script>
+    <script src='https://redditjs.com/post.js' data-url="<%= reddit_post_id %>" data-height='390' data-width='500' data-post-finder='mostComments' data-theme='light' data-show-submit='true'></script>
     <% end %>
 
 </div>
