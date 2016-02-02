@@ -15,6 +15,28 @@
 	</head>
 
 	<body>
+		<% if flash[:error] %>
+    <div>Error: <%= flash[:error] %></div>
+  <% end %>
+
+  <% if flash[:notice] %>
+    <div><%= flash[:notice] %></div>
+  <% end %>
+	
+		<% if logged_in? %>
+    Current user is: <%= current_user.name  %>
+    <%= link_to "Log Out", sessions_path, method: :delete %>
+
+  <% else %>
+  <%= link_to "Sign Up", '/signup' %>
+  <%= link_to "Log In", '/login' %>
+  <!-- <%= link_to "New Post", '/posts/new' %> -->
+  <!-- <%= link_to 'Edit', '/posts/edit' %> -->
+  <!-- <%= link_to 'post title', '/posts/post_id' %> -->
+
+
+  <% end %>
+
 
 
 		<%= yield %>
@@ -22,5 +44,3 @@
 
 	</body>
 </html>
-
-

@@ -1,11 +1,16 @@
 Rails.application.routes.draw do
   root "welcome#index"
-
+  resources :users
+  resources :sessions
   resources :themes
   post '/' => 'themes#show'
   # resources :twilio, only: [:index, :show]
 
-
+  get 'signup', to: 'users#new'
+  get '/', to: 'posts#index'
+  get '/login', to: 'sessions#new'
+  post '/sessions', to: 'sessions#create'
+  delete 'sessions', to: "sessions#destroy"
 
   get '/twilio', to: 'twilio#index'
   post 'call' => 'twilio#call'
