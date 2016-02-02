@@ -1,0 +1,12 @@
+<h1>Log in</h1>
+<%= form_for @user, url: 'sessions#create' do |f| %>
+  <div class="email">
+    <%= f.label :email, 'email: ' %>
+    <%= f.email_field :email %>
+  </div>
+  <div class="password">
+    <%= f.label :password, 'password: ' %>
+    <%= f.password_field :password %>
+  </div>
+  <%= f.submit "Log In" %>
+<% end %>
