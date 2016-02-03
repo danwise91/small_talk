@@ -5,22 +5,25 @@ class SessionsController < ApplicationController
   end
 
   def create
+    if params[:commit] == "Log In"
+      @user = User.find_by(email: params[:user][:email])
+      if @user && @user.authenticate(params[:user][:password])
+        session[:user_id] = @user.id
+        redirect_to '/', notice: "Hello, #{current_user.name}!"
+      else
+
+     @user = User.new
+        flash.now[:error] = "Bad Username or Password"
+        render :new
+      end
+    else
+    # binding.pry
     user = User.from_omniauth(env["omniauth.auth"])
     session[:user_id] = user.id
     redirect_to root_path
   end
+end
 
-  #   user = User.find_by(email: params[:user][:email])
-  # if @user && @user.authenticate(params[:user][:password])
-  #   session[:user_id] = @user.id
-  #   redirect_to '/', notice: "Hello, #{current_user.name}!"
-  # else
-  #   @user = User.new
-  #   flash.now[:error] = "Bad Username or Password"
-  #   binding.pry
-  #   render :new
-  # end
-  # end
 
   def destroy
     session[:user_id] = nil

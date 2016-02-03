@@ -6,6 +6,7 @@ class User < ActiveRecord::Base
   validates_presence_of :email
   validates_uniqueness_of :name
   validates_presence_of :name
+
   def self.from_omniauth(auth)
    where(provider: auth.provider, uid: auth.uid).first_or_create do |user|
       user.provider = auth.provider
