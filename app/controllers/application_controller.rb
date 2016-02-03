@@ -5,6 +5,11 @@ class ApplicationController < ActionController::Base
   helper_method :current_user, :logged_in?
   # before_action :authorize
 
+  def create
+    user = User.from_omniauth(env["omniauth.auth"])
+    session[:user_id] = user.id
+    redirect_to root_path
+  end
 
   def current_user
     @current_user ||= User.find(session[:user_id]) if session[:user_id]
@@ -14,6 +19,10 @@ class ApplicationController < ActionController::Base
     !!current_user
   end
 
+  def destroy
+    session[:user_id] = nil
+    redirect_to root_path
+  end
   # def authorize
   #   redirect_to root_path, notice: "Log in to edit or delete your Post" unless logged_in?
   # end

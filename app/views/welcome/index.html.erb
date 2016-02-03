@@ -1,5 +1,5 @@
 <div class="jumbotron text-center">
-    <h1>Small Talk</h1> 
+    <h1>Small Talk</h1>
     <p>We'll make all your wildest dreams come true!</p>
 </div>
 
@@ -11,9 +11,9 @@
 
       <%= form_tag method: :get do %>
       <%= select_tag('theme[id]', options_for_select(@themes.collect{ |theme| [theme.name, theme.id] })) %>
-          
+
       <button type="submit" class="btn btn-danger">Get Advice</button>
-    
+
       <% end %>
     </div>
   </ul>
