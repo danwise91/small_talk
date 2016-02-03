@@ -1,0 +1,23 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import "font-awesome";
+
+<!-- Stylesheets -->
+<link href="css/style.css" rel="stylesheet" title="main-css">
+<link href="css/bootstrap-social.css" rel="stylesheet">
+@import "animate.min";
+@import "owl.carousel";
+@import "jquery.snippet";
+@import "buttons";
+@import "style-switcher";
+
+<!-- Alternate Stylesheets // choose what you want and remove rest for production -->
+@import "colors/blue";
+//24:29 on video 
+<link rel="alternate stylesheet" type="text/css" href="css/width-full.css" title="width-full">
+<link rel="alternate stylesheet" type="text/css" href="css/width-boxed.css" title="width-boxed">
+
+<!-- Icon Fonts -->
+<link href='css/ionicons.min.css' rel='stylesheet' type='text/css'>
+<!-- Magnific Popup -->
+<link href='css/magnific-popup.css' rel='stylesheet' type='text/css'>

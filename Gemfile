@@ -1,5 +1,9 @@
 source 'https://rubygems.org'
 
+gem 'bootstrap-sass', '~> 3.3.5'
+
+gem 'font-awesome-rails'
+
 gem 'omniauth-facebook', '~> 1.4.1'
 
 gem 'bcrypt', '~> 3.1.2'
