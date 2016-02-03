@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+gem 'omniauth-facebook', '~> 1.4.1'
+
 gem 'bcrypt', '~> 3.1.2'
 
 gem 'dotenv-rails', :groups => [:development, :test]

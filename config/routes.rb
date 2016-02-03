@@ -22,5 +22,12 @@ Rails.application.routes.draw do
   get 'request_form' => 'welcome#request_form', as: 'request_form'
   get 'careers' => 'welcome#careers', as: 'careers'
   get 'support' => 'welcome#support', as: 'support'
-  get 'facebook' => 'welcome#facebook', as: 'facebook'
+
+  get 'auth/:provider/callback', to: 'sessions#create'
+  get 'auth/failure', to: redirect('/')
+  get 'signout', to: 'sessions#destroy', as: 'signout'
+
+  resources :sessions, only: [:create, :destroy]
+  resources :home, only: [:show]
+
 end
