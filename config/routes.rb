@@ -11,6 +11,7 @@ Rails.application.routes.draw do
   get '/login', to: 'sessions#new'
   post '/sessions', to: 'sessions#create'
   delete 'sessions', to: "sessions#destroy"
+  post '/users/edit', to: 'users#edit'
 
   get '/twilio', to: 'twilio#index'
   post 'call' => 'twilio#call'

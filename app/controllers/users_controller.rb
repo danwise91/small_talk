@@ -25,6 +25,10 @@ class UsersController < ApplicationController
   end
   end
 
+  def edit
+    binding.pry
+  end
+
     def destroy
       @user.destroy
       respond_to do |format|

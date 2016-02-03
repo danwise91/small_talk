@@ -16,11 +16,12 @@
       <% reddit_post_id = post_url.split('/')[-2] %>
       <% end %>
 
-    <li><%= link_to formatted_title, post_url, target: "_blank" %></li>
-    <% tip = @tips.sample %>
+
+      <li><%= link_to formatted_title, post_url, target: "_blank" %></li>
+    <% @tip = @tips.sample %>
     <strong>Tip:</strong>
-    <li><%=tip.description %></li>
-    <%= button_to %>
+    <li><%=@tip.description %></li>
+    <%= button_to "Save Tip", '/users/edit' %>
   </ul>
 
 </div>
