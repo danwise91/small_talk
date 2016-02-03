@@ -7,8 +7,8 @@ class UsersController < ApplicationController
   end
 
   def show
-
-
+    @user = current_user
+    binding.pry
   end
 
   def new
@@ -39,6 +39,6 @@ class UsersController < ApplicationController
     end
 
     def user_params
-      params.require(:user).permit(:name, :email, :password, :password_confirmation)
+      params.require(:user).permit(:name, :email, :password, :password_confirmation, :tip_ids => [])
     end
 end
