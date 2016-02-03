@@ -1,4 +1,4 @@
-aclass User < ActiveRecord::Base
+class User < ActiveRecord::Base
   has_secure_password
   has_many :posts
   has_many :comments
@@ -18,5 +18,3 @@ aclass User < ActiveRecord::Base
     end
   end
 end
-
-#kristys code
