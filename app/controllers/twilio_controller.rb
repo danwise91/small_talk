@@ -67,7 +67,7 @@ class TwilioController < ApplicationController
     # format. Our Ruby library provides a helper for generating one
     # of these documents
     response = Twilio::TwiML::Response.new do |r|
-      r.Say 'This is an emergency please leave the party as quickly as possible. If you see a fire alarm, pull it.', :voice => 'alice'
+      r.Say 'This is an emergency. Please leave the party as quickly as possible. If you see a fire alarm, pull it and run like hell.', :voice => 'alice'
     end
     render text: response.text
   end
