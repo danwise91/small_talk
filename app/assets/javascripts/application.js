@@ -11,9 +11,9 @@
 // about supported directives.
 //
 //= require jquery
-//= require jquery_ujs
 //= require royal_preloader.min
 //= require preloader_config
+//= require jquery_ujs
 //= require bootstrap-sprockets
 //= require turbolinks
 //= require bootstrap.min
@@ -28,6 +28,6 @@
 //= require style-switcher
 //= require activate-snippet
 //= require skrollr.min
-//= require main
 //= require window_config
+//= require main
 //= require_tree .
