@@ -18,9 +18,10 @@
 
 
       <li><%= link_to formatted_title, post_url, target: "_blank" %></li>
-    <% tip = @tips.sample %>
+    <% @tip = @tips.sample %>
     <strong>Tip:</strong>
-    <li><%=tip.description %></li>
+    <li><%=@tip.description %></li>
+    <%= button_to "Save Tip", '/users/edit', remote: true, params: {id: @tip.id} %>
 
   </ul>
 
