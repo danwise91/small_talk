@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   resources :sessions
   resources :themes
   post '/' => 'themes#show'
+  post 'users/edit' => 'users#edit'
   # resources :twilio, only: [:index, :show]
 
   get 'signup', to: 'users#new'
@@ -11,6 +12,7 @@ Rails.application.routes.draw do
   get '/login', to: 'sessions#new'
   post '/sessions', to: 'sessions#create'
   delete 'sessions', to: "sessions#destroy"
+
 
   get '/twilio', to: 'twilio#index'
   post 'call' => 'twilio#call'

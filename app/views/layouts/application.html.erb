@@ -35,10 +35,18 @@
 		});
 	</script>
 
-
 </head>
 <body class="royal_preloader scrollreveal">
-
+		<% if logged_in? %>
+    Current user is: <%= current_user.name  %>
+    <%= link_to "Log Out", sessions_path, method: :delete %>
+		<%= link_to "Your page", 'users/user_id' %>
+  <% else %>
+  <%= link_to "Sign Up", '/signup' %>
+  <%= link_to "Log In", '/login' %>
+  <!-- <%= link_to "New Post", '/posts/new' %> -->
+  <!-- <%= link_to 'Edit', '/posts/edit' %> -->
+  <!-- <%= link_to 'post title', '/posts/post_id' %> -->
 	<div id="royal_preloader"></div>
 
 	<!-- Start Switcher -->

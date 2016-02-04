@@ -3,7 +3,7 @@ $(function(){
     // Prevent form submission and repeat clicks
     e.preventDefault();
     e.stopPropagation();
-    // $submit.attr('disabled', 'disabled');
+    $("#contactform").attr('disabled', 'disabled');
 
     // Submit the form via ajax
     $.ajax({
@@ -15,7 +15,7 @@ $(function(){
     }).fail(function() {
         alert('There was a problem calling you - please try again later.');
     }).always(function() {
-        // $submit.removeAttr('disabled');
+        $("#contactform").removeAttr('disabled');
     });
   });
 });

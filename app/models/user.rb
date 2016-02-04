@@ -1,11 +1,19 @@
 class User < ActiveRecord::Base
   has_secure_password
-  has_many :posts
-  has_many :comments
+
+  has_many :user_tips
+  has_many :tips, :through => :user_tips
+  validates_uniqueness_of :email
+  validates_presence_of :email
+  validates_uniqueness_of :name
+  validates_presence_of :name
+
+
   # validates_uniqueness_of :email
   # validates_presence_of :email
   # validates_uniqueness_of :name
   # validates_presence_of :name
+
 
   def self.from_omniauth(auth)
    where(provider: auth.provider, uid: auth.uid).first_or_create do |user|

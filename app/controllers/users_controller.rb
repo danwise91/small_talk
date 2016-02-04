@@ -7,8 +7,6 @@ class UsersController < ApplicationController
   end
 
   def show
-
-
   end
 
   def new
@@ -23,6 +21,9 @@ class UsersController < ApplicationController
   else
     render :new
   end
+  end
+
+  def edit
   end
 
     def destroy
