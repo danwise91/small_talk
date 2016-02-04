@@ -11,8 +11,10 @@
 // about supported directives.
 //
 //= require jquery
-//= require bootstrap-sprockets
 //= require jquery_ujs
+//= require royal_preloader.min
+//= require preloader_config
+//= require bootstrap-sprockets
 //= require turbolinks
 //= require bootstrap.min
 //= require hover-dropdown
@@ -27,4 +29,5 @@
 //= require activate-snippet
 //= require skrollr.min
 //= require main
+//= require window_config
 //= require_tree .

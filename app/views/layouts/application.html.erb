@@ -2,11 +2,8 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 	<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-	
+
 	<title>Small Talk</title>
 	<%= csrf_meta_tags %>
 
@@ -19,20 +16,10 @@
 
 
 	<!-- Royal Preloader CSS -->
-	<link rel="stylesheet" type="text/css" href="css/royal_preloader.css">
+	<!-- <link rel="stylesheet" type="text/css" href="css/royal_preloader.css"> -->
 
-	<!-- jQuery Files -->
-	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 
 	<!-- Royal Preloader -->
-	<script type="text/javascript" src="js/royal_preloader.min.js"></script>
-	<script type="text/javascript">
-		Royal_Preloader.config({
-		    mode:       	'number',
-		    showProgress: 	false,
-		    background: 	'#ffffff'
-		});
-	</script>
 
 </head>
 <body class="royal_preloader scrollreveal">
@@ -160,7 +147,7 @@
 							<!-- Brand -->
 							<a href="index.html" class="navbar-brand">
 								<div class="css-logo"></div>
-								<%= image_tag 'images/logo.png', class: 'raleway-logo', alt: 'Raleway Responsive Parallax Bootstrap 3 Template' %>
+								<%= image_tag 'logo.png', class: 'raleway-logo', alt: 'Raleway Responsive Parallax Bootstrap 3 Template' %>
 							</a>
 							<!-- Mobile Navigation -->
 							<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navHeaderCollapse">
@@ -410,7 +397,7 @@
 						<!-- Begin Item 1 -->
 						<div class="item active">
 							<!-- Item BG -->
-							<div class="background-main" style="background-image:url('images/backgrounds/bg1.png');" data-0="background-position:0px 0px;" data-500="background-position:0px -250px;">
+							<div class="background-main" style="background-image:url('<%= asset_path("backgrounds/bg1.png") %>');" data-0="background-position:0px 0px;" data-500="background-position:0px -250px;">
 								<div class="container">
 									<div class="row carousel-content center-vertically-right">
 										<!-- Content -->
@@ -422,7 +409,7 @@
 										</div>
 										<div class="fadeInLeft-animated" data-animation="fadeInLeft">
 											<div class="col-sm-6 col-sm-offset-1">
-												<%= image_tag 'images/showcase-full.png', class: 'img-responsive carousel-image', alt: 'Responsive Showcase' %>
+												<%= image_tag 'showcase-full.png', class: 'img-responsive carousel-image', alt: 'Responsive Showcase' %>
 											</div>
 										</div>
 									</div><!-- /content container -->
@@ -434,13 +421,13 @@
 						<!-- Begin Item 2 -->
 						<div class="item">
 							<!-- Item BG -->
-							<div style="background-image:url('images/backgrounds/bg4.jpg');" data-0="background-position:0px 0px;" data-500="background-position:0px -250px;">
+							<div style="background-image:url('<%= asset_path("backgrounds/bg4.jpg") %>');" data-0="background-position:0px 0px;" data-500="background-position:0px -250px;">
 								<div class="container">
 									<div class="row carousel-content center-vertically-left">
 										<!-- Img -->
 										<div class="fadeInLeft-animated" data-animation="fadeInLeft">
 											<div class="col-sm-6 hidden-xs">
-												<%= image_tag 'images/showcase2.png', class: 'img-responsive carousel-image', alt: 'Responsive Showcase' %>
+												<%= image_tag 'showcase2.png', class: 'img-responsive carousel-image', alt: 'Responsive Showcase' %>
 											</div>
 										</div>
 										<!-- Content -->
@@ -464,7 +451,7 @@
 						<!-- Begin Item 3 -->
 						<div class="item">
 							<!-- Item BG -->
-							<div style="background-image:url('images/backgrounds/bg5.jpg');" data-0="background-position:0px 0px;" data-500="background-position:0px -250px;">
+							<div style="background-image:url('<%= asset_path("backgrounds/bg5.jpg") %>');" data-0="background-position:0px 0px;" data-500="background-position:0px -250px;">
 								<div class="container">
 									<div class="row carousel-content center-vertically-right">
 										<div class="fadeInUpBig-animated" data-animation="fadeInUpBig">
@@ -601,7 +588,7 @@
 
 						<!-- Begin Image -->
 						<div class="col-sm-6" data-sr="enter bottom" >
-							<%= image_tag 'images/showcase.png', class: 'img-responsive showcase-image', alt: 'Responsive Showcase 2' %>
+							<%= image_tag 'showcase.png', class: 'img-responsive showcase-image', alt: 'Responsive Showcase 2' %>
 
 						</div><!-- /column -->
 
@@ -631,13 +618,13 @@
 								<!-- Wrapper for slides -->
 								<div class="carousel-inner">
 									<div class="item active">
-										<div style="background-image:url('images/backgrounds/stock2.jpg'); height:260px;"></div>
+										<div style="background-image:url('<%= asset_path("backgrounds/stock2.jpg") %>'); height:260px;"></div>
 									</div>
 									<div class="item">
-										<div style="background-image:url('images/backgrounds/stock7.jpg'); height:260px"></div>
+										<div style="background-image:url('<%= asset_path("backgrounds/stock7.jpg") %>'); height:260px"></div>
 									</div>
 									<div class="item">
-										<div style="background-image:url('images/backgrounds/stock1.jpg'); height:260px"></div>
+										<div style="background-image:url('<%= asset_path("backgrounds/stock1.jpg") %>'); height:260px"></div>
 									</div>
 								</div>
 
@@ -693,7 +680,7 @@
 						                    <a href="#" class="btn btn-rw btn-clear"><span class="ion-android-search"></span> View</a>
 					                    </div>
 					                </div>
-													<%= image_tag 'images/backgrounds/stock1.jpg', alt: '...' %>
+													<%= image_tag 'backgrounds/stock1.jpg', alt: '...' %>
 
 					            </div>
 								<div class="thumbnail">
@@ -703,7 +690,7 @@
 						                    <a href="#" class="btn btn-rw btn-clear"><span class="ion-android-search"></span> View</a>
 					                    </div>
 					                </div>
-													<%= image_tag 'images/backgrounds/stock2.jpg', alt: '...' %>
+													<%= image_tag 'backgrounds/stock2.jpg', alt: '...' %>
 
 					            </div>
 								<div class="thumbnail">
@@ -713,7 +700,7 @@
 						                    <a href="#" class="btn btn-rw btn-clear"><span class="ion-android-search"></span> View</a>
 					                    </div>
 					                </div>
-													<%= image_tag 'images/backgrounds/stock3.jpg', alt: '...' %>
+													<%= image_tag 'backgrounds/stock3.jpg', alt: '...' %>
 
 					            </div>
 								<div class="thumbnail">
@@ -723,7 +710,7 @@
 						                    <a href="#" class="btn btn-rw btn-clear"><span class="ion-android-search"></span> View</a>
 					                    </div>
 					                </div>
-													<%= image_tag 'images/backgrounds/stock4.jpg', alt: '...' %>
+													<%= image_tag 'backgrounds/stock4.jpg', alt: '...' %>
 
 					            </div>
 								<div class="thumbnail">
@@ -733,7 +720,7 @@
 						                    <a href="#" class="btn btn-rw btn-clear"><span class="ion-android-search"></span> View</a>
 					                    </div>
 					                </div>
-													<%= image_tag 'images/backgrounds/stock5.jpg', alt: '...' %>
+													<%= image_tag 'backgrounds/stock5.jpg', alt: '...' %>
 
 					            </div>
 								<div class="thumbnail">
@@ -743,7 +730,7 @@
 						                    <a href="#" class="btn btn-rw btn-clear"><span class="ion-android-search"></span> View</a>
 					                    </div>
 					                </div>
-													<%= image_tag 'images/backgrounds/stock6.jpg', alt: '...' %>
+													<%= image_tag 'backgrounds/stock6.jpg', alt: '...' %>
 
 					            </div>
 							</div>
@@ -753,37 +740,37 @@
 					<div class="row">
 						<!-- Client 1 -->
 						<div class="col-sm-2 col-xs-4 mb30-xs" data-sr="enter left" >
-							<a href="#"><%= image_tag 'images/logos/boomerang.png', class: 'img-responsive clients-img', alt: 'Client 1' %></a>
+							<a href="#"><%= image_tag 'logos/boomerang.png', class: 'img-responsive clients-img', alt: 'Client 1' %></a>
 
 						</div>
 
 						<!-- Client 2 -->
 						<div class="col-sm-2 col-xs-4 mb30-xs" data-sr="enter left">
-							<a href="#"><%= image_tag 'images/logos/backlight.png', class: 'img-responsive clients-img', alt: 'Client 2' %></a>
+							<a href="#"><%= image_tag 'logos/backlight.png', class: 'img-responsive clients-img', alt: 'Client 2' %></a>
 
 						</div>
 
 						<!-- Client 3 -->
 						<div class="col-sm-2 col-xs-4 mb30-xs" data-sr="enter left">
-							<a href="#"><%= image_tag 'images/logos/equi.png', class: 'img-responsive clients-img', alt: 'Client 3' %></a>
+							<a href="#"><%= image_tag 'logos/equi.png', class: 'img-responsive clients-img', alt: 'Client 3' %></a>
 
 						</div>
 
 						<!-- Client 4 -->
 						<div class="col-sm-2 col-xs-4" data-sr="enter left">
-							<a href="#"><%= image_tag 'images/logos/ome.png', class: 'img-responsive clients-img', alt: 'Client 4' %></a>
+							<a href="#"><%= image_tag 'logos/ome.png', class: 'img-responsive clients-img', alt: 'Client 4' %></a>
 
 						</div>
 
 						<!-- Client 5 -->
 						<div class="col-sm-2 col-xs-4" data-sr="enter left">
-							<a href="#"><%= image_tag 'images/logos/euro.png', class: 'img-responsive clients-img', alt: 'Client 5' %></a>
+							<a href="#"><%= image_tag 'logos/euro.png', class: 'img-responsive clients-img', alt: 'Client 5' %></a>
 
 						</div>
 
 						<!-- Client 6 -->
 						<div class="col-sm-2 col-xs-4" data-sr="enter left">
-							<a href="#"><%= image_tag 'images/logos/micro.png', class: 'img-responsive clients-img', alt: 'Client 6' %></a>
+							<a href="#"><%= image_tag 'logos/micro.png', class: 'img-responsive clients-img', alt: 'Client 6' %></a>
 
 						</div>
 					</div><!-- /row -->
@@ -853,19 +840,19 @@
 							<div class="heading-footer"><h4>Recent Work</h4></div>
 							<div class="col-xs-4 recent-work-padding">
 								<a href="images/projects/web2.jpg" class="thumbnail image-zoom-link">
-										<%= image_tag 'images/projects/thumbs/web2.jpg', alt: '...', class: 'thumbnail img-responsive' %>
+										<%= image_tag 'projects/thumbs/web2.jpg', alt: '...', class: 'thumbnail img-responsive' %>
 
 							    </a>
 							</div>
 							<div class="col-xs-4 recent-work-padding">
 								<a href="images/projects/web3.jpg" class="thumbnail image-zoom-link">
-										<%= image_tag 'images/projects/thumbs/web3.jpg', alt: '...', class: 'thumbnail img-responsive' %>
+										<%= image_tag 'projects/thumbs/web3.jpg', alt: '...', class: 'thumbnail img-responsive' %>
 
 							    </a>
 							</div>
 							<div class="col-xs-4 recent-work-padding">
 								<a href="images/projects/illustration1.jpg" class="thumbnail image-zoom-link">
-										<%= image_tag 'images/projects/thumbs/illustration1.jpg', alt: '...', class: 'thumbnail img-responsive' %>
+										<%= image_tag 'projects/thumbs/illustration1.jpg', alt: '...', class: 'thumbnail img-responsive' %>
 
 							    </a>
 							</div>
@@ -893,13 +880,6 @@
 	<!-- Javascript Files -->
 	<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
 
-    <script>
-		var config = {
-		easing: 'hustle',
-		mobile:  true,
-		delay:  'onload'
-		}
-		window.sr = new scrollReveal( config );
-    </script>
+
 </body>
 </html>

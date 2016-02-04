@@ -1,6 +1,6 @@
+@import "royal_preloader.css";
 @import "bootstrap-sprockets";
 @import "bootstrap";
-@import "font-awesome";
 
 
 @import "style.css";
@@ -20,3 +20,11 @@
 @import "ionicons.min";
 
 @import "magnific-popup";
+@import "font-awesome-sprockets";
+@import "font-awesome";
+@font-face {
+    font-family: 'fontawesome';
+    src: url('ionicons.woff') format('woff'),
+          url('fontawesome-webfont.woff') format('woff'),
+          url('fontawesome-webfont.ttf') format('truetype');
+}

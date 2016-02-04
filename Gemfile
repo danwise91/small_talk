@@ -3,6 +3,7 @@ source 'https://rubygems.org'
 gem 'bootstrap-sass', '~> 3.3.5'
 
 gem 'font-awesome-rails'
+gem 'font-awesome-sass'
 
 gem 'omniauth-facebook', '~> 1.4.1'
 
