@@ -11,6 +11,23 @@
 // about supported directives.
 //
 //= require jquery
+//= require royal_preloader.min
+//= require preloader_config
 //= require jquery_ujs
+//= require bootstrap-sprockets
 //= require turbolinks
+//= require bootstrap.min
+//= require hover-dropdown
+//= require jquery.easing.min
+//= require jquery.mixitup.min
+//= require scrollReveal
+//= require owl.carousel.min
+//= require jquery.magnific-popup.min
+//= require jquery.snippet.min
+//= require jquery.fitvids
+//= require style-switcher
+//= require activate-snippet
+//= require skrollr.min
+//= require window_config
+//= require main
 //= require_tree .

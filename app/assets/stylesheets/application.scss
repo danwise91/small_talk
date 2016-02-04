@@ -1,0 +1,32 @@
+@import "royal_preloader.css";
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+
+@import "style.css";
+@import "bootstrap-social.css";
+@import "animate.min";
+@import "owl.carousel";
+@import "jquery.snippet";
+@import "buttons";
+@import "style-switcher";
+
+@import "colors/blue";
+
+@import "width-full";
+@import "width-boxed";
+
+
+@import "ionicons.min";
+@import "ionicons";
+
+@import "magnific-popup";
+@import "font-awesome-sprockets";
+@import "font-awesome";
+@font-face {
+    font-family: 'fontawesome';
+    src: url('/assests/ionicons.woff') format('woff'),
+      url('/assests/ionicons.ttf') format('truetype');
+    src: url('/assets/fontawesome-webfont.woff') format('woff'),
+        url('/assets/fontawesome-webfont.ttf') format('truetype');
+}
