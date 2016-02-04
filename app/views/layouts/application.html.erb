@@ -1,14 +1,13 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>Small Talk</title>
 	<meta charset="utf-8">
 	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
 	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 	<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-	<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+	
+	<title>Small Talk</title>
 	<%= csrf_meta_tags %>
 
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
@@ -44,6 +43,7 @@
   <% else %>
   <%= link_to "Sign Up", '/signup' %>
   <%= link_to "Log In", '/login' %>
+	<% end %>
   <!-- <%= link_to "New Post", '/posts/new' %> -->
   <!-- <%= link_to 'Edit', '/posts/edit' %> -->
   <!-- <%= link_to 'post title', '/posts/post_id' %> -->
@@ -159,7 +159,8 @@
 						<div class="navbar-header">
 							<!-- Brand -->
 							<a href="index.html" class="navbar-brand">
-								<div class="css-logo"></div> <img src="images/logo.png" class="raleway-logo" alt="Raleway Responsive Parallax Bootstrap 3 Template">
+								<div class="css-logo"></div>
+								<%= image_tag 'images/logo.png', class: 'raleway-logo', alt: 'Raleway Responsive Parallax Bootstrap 3 Template' %>
 							</a>
 							<!-- Mobile Navigation -->
 							<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navHeaderCollapse">
@@ -421,7 +422,7 @@
 										</div>
 										<div class="fadeInLeft-animated" data-animation="fadeInLeft">
 											<div class="col-sm-6 col-sm-offset-1">
-												<img src="images/showcase-full.png" class="img-responsive carousel-image" alt="Responsive Showcase">
+												<%= image_tag 'images/showcase-full.png', class: 'img-responsive carousel-image', alt: 'Responsive Showcase' %>
 											</div>
 										</div>
 									</div><!-- /content container -->
@@ -439,7 +440,7 @@
 										<!-- Img -->
 										<div class="fadeInLeft-animated" data-animation="fadeInLeft">
 											<div class="col-sm-6 hidden-xs">
-												<img src="images/showcase2.png" class="img-responsive carousel-image" alt="Responsive Showcase">
+												<%= image_tag 'images/showcase2.png', class: 'img-responsive carousel-image', alt: 'Responsive Showcase' %>
 											</div>
 										</div>
 										<!-- Content -->
@@ -600,7 +601,8 @@
 
 						<!-- Begin Image -->
 						<div class="col-sm-6" data-sr="enter bottom" >
-							<img src="images/showcase.png" class="img-responsive showcase-image" alt="Responsive Showcase 2">
+							<%= image_tag 'images/showcase.png', class: 'img-responsive showcase-image', alt: 'Responsive Showcase 2' %>
+
 						</div><!-- /column -->
 
 					</div><!-- /row -->
@@ -691,7 +693,8 @@
 						                    <a href="#" class="btn btn-rw btn-clear"><span class="ion-android-search"></span> View</a>
 					                    </div>
 					                </div>
-					                <img src="images/backgrounds/stock1.jpg" alt="...">
+													<%= image_tag 'images/backgrounds/stock1.jpg', alt: '...' %>
+
 					            </div>
 								<div class="thumbnail">
 					                <div class="caption">
@@ -700,7 +703,8 @@
 						                    <a href="#" class="btn btn-rw btn-clear"><span class="ion-android-search"></span> View</a>
 					                    </div>
 					                </div>
-					                <img src="images/backgrounds/stock2.jpg" alt="...">
+													<%= image_tag 'images/backgrounds/stock2.jpg', alt: '...' %>
+
 					            </div>
 								<div class="thumbnail">
 					                <div class="caption">
@@ -709,7 +713,8 @@
 						                    <a href="#" class="btn btn-rw btn-clear"><span class="ion-android-search"></span> View</a>
 					                    </div>
 					                </div>
-					                <img src="images/backgrounds/stock3.jpg" alt="...">
+													<%= image_tag 'images/backgrounds/stock3.jpg', alt: '...' %>
+
 					            </div>
 								<div class="thumbnail">
 					                <div class="caption">
@@ -718,7 +723,8 @@
 						                    <a href="#" class="btn btn-rw btn-clear"><span class="ion-android-search"></span> View</a>
 					                    </div>
 					                </div>
-					                <img src="images/backgrounds/stock4.jpg" alt="...">
+													<%= image_tag 'images/backgrounds/stock4.jpg', alt: '...' %>
+
 					            </div>
 								<div class="thumbnail">
 					                <div class="caption">
@@ -727,7 +733,8 @@
 						                    <a href="#" class="btn btn-rw btn-clear"><span class="ion-android-search"></span> View</a>
 					                    </div>
 					                </div>
-					                <img src="images/backgrounds/stock5.jpg" alt="...">
+													<%= image_tag 'images/backgrounds/stock5.jpg', alt: '...' %>
+
 					            </div>
 								<div class="thumbnail">
 					                <div class="caption">
@@ -736,7 +743,8 @@
 						                    <a href="#" class="btn btn-rw btn-clear"><span class="ion-android-search"></span> View</a>
 					                    </div>
 					                </div>
-					                <img src="images/backgrounds/stock6.jpg" alt="...">
+													<%= image_tag 'images/backgrounds/stock6.jpg', alt: '...' %>
+
 					            </div>
 							</div>
 						</div>
@@ -745,32 +753,38 @@
 					<div class="row">
 						<!-- Client 1 -->
 						<div class="col-sm-2 col-xs-4 mb30-xs" data-sr="enter left" >
-							<a href="#"><img src="images/logos/boomerang.png" class="img-responsive clients-img" alt="Client 1"></a>
+							<a href="#"><%= image_tag 'images/logos/boomerang.png', class: 'img-responsive clients-img', alt: 'Client 1' %></a>
+
 						</div>
 
 						<!-- Client 2 -->
 						<div class="col-sm-2 col-xs-4 mb30-xs" data-sr="enter left">
-							<a href="#"><img src="images/logos/backlight.png" class="img-responsive clients-img" alt="Client 2"></a>
+							<a href="#"><%= image_tag 'images/logos/backlight.png', class: 'img-responsive clients-img', alt: 'Client 2' %></a>
+
 						</div>
 
 						<!-- Client 3 -->
 						<div class="col-sm-2 col-xs-4 mb30-xs" data-sr="enter left">
-							<a href="#"><img src="images/logos/equi.png" class="img-responsive clients-img" alt="Client 3"></a>
+							<a href="#"><%= image_tag 'images/logos/equi.png', class: 'img-responsive clients-img', alt: 'Client 3' %></a>
+
 						</div>
 
 						<!-- Client 4 -->
 						<div class="col-sm-2 col-xs-4" data-sr="enter left">
-							<a href="#"><img src="images/logos/ome.png" class="img-responsive clients-img" alt="Client 4"></a>
+							<a href="#"><%= image_tag 'images/logos/ome.png', class: 'img-responsive clients-img', alt: 'Client 4' %></a>
+
 						</div>
 
 						<!-- Client 5 -->
 						<div class="col-sm-2 col-xs-4" data-sr="enter left">
-							<a href="#"><img src="images/logos/euro.png" class="img-responsive clients-img" alt="Client 5"></a>
+							<a href="#"><%= image_tag 'images/logos/euro.png', class: 'img-responsive clients-img', alt: 'Client 5' %></a>
+
 						</div>
 
 						<!-- Client 6 -->
 						<div class="col-sm-2 col-xs-4" data-sr="enter left">
-							<a href="#"><img src="images/logos/micro.png" class="img-responsive clients-img" alt="Client 6"></a>
+							<a href="#"><%= image_tag 'images/logos/micro.png', class: 'img-responsive clients-img', alt: 'Client 6' %></a>
+
 						</div>
 					</div><!-- /row -->
 
@@ -839,17 +853,20 @@
 							<div class="heading-footer"><h4>Recent Work</h4></div>
 							<div class="col-xs-4 recent-work-padding">
 								<a href="images/projects/web2.jpg" class="thumbnail image-zoom-link">
-							      <img src="images/projects/thumbs/web2.jpg" alt="..." class="thumbnail img-responsive">
+										<%= image_tag 'images/projects/thumbs/web2.jpg', alt: '...', class: 'thumbnail img-responsive' %>
+
 							    </a>
 							</div>
 							<div class="col-xs-4 recent-work-padding">
 								<a href="images/projects/web3.jpg" class="thumbnail image-zoom-link">
-							      <img src="images/projects/thumbs/web3.jpg" alt="..." class="thumbnail img-responsive">
+										<%= image_tag 'images/projects/thumbs/web3.jpg', alt: '...', class: 'thumbnail img-responsive' %>
+
 							    </a>
 							</div>
 							<div class="col-xs-4 recent-work-padding">
 								<a href="images/projects/illustration1.jpg" class="thumbnail image-zoom-link">
-							      <img src="images/projects/thumbs/illustration1.jpg" alt="..." class="thumbnail img-responsive">
+										<%= image_tag 'images/projects/thumbs/illustration1.jpg', alt: '...', class: 'thumbnail img-responsive' %>
+
 							    </a>
 							</div>
 						</div>
@@ -874,18 +891,8 @@
 	<!-- End Boxed or Fullwidth Layout -->
 
 	<!-- Javascript Files -->
-	<script type="text/javascript" src="js/bootstrap.min.js"></script>
-	<script type="text/javascript" src="js/hover-dropdown.js"></script>
-	<script type="text/javascript" src="js/jquery.easing.min.js"></script>
-	<script type="text/javascript" src="js/jquery.mixitup.min.js"></script>
-	<script type="text/javascript" src="js/scrollReveal.js"></script>
-	<script type="text/javascript" src="js/owl.carousel.min.js"></script>
-	<script type="text/javascript" src="js/jquery.magnific-popup.min.js"></script>
-	<script type="text/javascript" src="js/jquery.snippet.min.js"></script>
-	<script type="text/javascript" src="js/jquery.fitvids.js"></script>
-	<script type="text/javascript" src="js/style-switcher.js"></script>
-	<script type="text/javascript" src="js/activate-snippet.js"></script>
-	<script type="text/javascript" src="js/skrollr.min.js"></script>
+	<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+
     <script>
 		var config = {
 		easing: 'hustle',
@@ -894,6 +901,5 @@
 		}
 		window.sr = new scrollReveal( config );
     </script>
-	<script type="text/javascript" src="js/main.js"></script>
 </body>
 </html>
