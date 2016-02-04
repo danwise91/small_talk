@@ -56,9 +56,6 @@ ActiveRecord::Schema.define(version: 20160203164540) do
     t.integer "tip_id"
   end
 
-  add_index "user_tips", ["tip_id"], name: "index_user_tips_on_tip_id", using: :btree
-  add_index "user_tips", ["user_id"], name: "index_user_tips_on_user_id", using: :btree
-
   create_table "users", force: :cascade do |t|
     t.string   "name"
     t.string   "email"
@@ -71,6 +68,4 @@ ActiveRecord::Schema.define(version: 20160203164540) do
 
   add_foreign_key "themes_tips", "themes"
   add_foreign_key "themes_tips", "tips"
-  add_foreign_key "user_tips", "tips"
-  add_foreign_key "user_tips", "users"
 end
