@@ -12,7 +12,6 @@ gem 'dotenv-rails', :groups => [:development, :test]
 gem 'twilio-ruby'
 gem 'phony_rails'
 
-gem "rack-timeout"
 gem 'puma'
 gem 'sidekiq'
 
