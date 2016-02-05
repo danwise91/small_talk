@@ -1,14 +1,13 @@
 source 'https://rubygems.org'
-ruby "2.2.0"
+ruby "2.3.0"
 
-gem 'bootstrap-sass', '~> 3.3.5'
+gem 'bootstrap-sass', '~> 3.3.6'
 gem 'font-awesome-rails'
 gem 'font-awesome-sass'
 gem 'ionicons-rails'
-gem 'omniauth-facebook', '~> 1.4.1'
+gem 'omniauth-facebook'
 gem 'dotenv-rails', :groups => [:development, :test]
-gem 'derailed', group: :development
-gem 'stackprof', group: :development
+
 
 gem 'twilio-ruby'
 gem 'phony_rails'
@@ -42,7 +41,7 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 
 # Use ActiveModel has_secure_password
-gem 'bcrypt', '~> 3.1.7'
+gem 'bcrypt'
 
 # Use Unicorn as the app server
 # gem 'unicorn'
