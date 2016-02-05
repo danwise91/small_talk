@@ -26,7 +26,12 @@ class UsersController < ApplicationController
   def edit
   end
 
-    def destroy
+  def delete_tip
+    tip = Tip.find(params[:id])
+    current_user.tips.delete(tip)
+  end
+
+  def destroy
       @user.destroy
       respond_to do |format|
         format.html { redirect_to users_url }
