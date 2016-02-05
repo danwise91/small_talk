@@ -1,4 +1,6 @@
 <p> <%= current_user.name %>  </p>
 <% current_user.tips.each do |tip| %>
 <p><%= tip.description %></p>
+<%= button_to "Delete tip", 
+<%= binding.pry %>
 <% end %>
