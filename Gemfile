@@ -6,6 +6,8 @@ gem 'font-awesome-sass'
 gem 'ionicons-rails'
 gem 'omniauth-facebook', '~> 1.4.1'
 gem 'dotenv-rails', :groups => [:development, :test]
+gem 'derailed', group: :development
+gem 'stackprof', group: :development
 
 gem 'twilio-ruby'
 gem 'phony_rails'
@@ -60,4 +62,4 @@ group :development do
   gem 'spring'
 end
 
-ruby '2.2.0'
+ruby '2.3.0'
