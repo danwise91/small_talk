@@ -20,9 +20,7 @@
 				</div>
 <% current_user.tips.each do |tip| %>
 <p><div class="fa-2x"><%= tip.description %></div></p>
-	<div class="button">
-		<%= link_to "Share tip", remote: true %>
-	</div>
+
 
 	<div class="button">
 		<%= link_to "Remove tip", remote: true, params: {id: tip.id} %>
