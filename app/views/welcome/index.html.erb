@@ -24,21 +24,23 @@
 </div>
 
 <div id="container">
+    <div class= "text-center">
+      <h3 class = "panel-title"> Who are you hanging out with? </p>
+</div>
 
-  Who are you hanging out with?
   <ul>
-    <div class="form-inline">
-
+    <div class="text-center">
       <%= form_tag method: :get do %>
       <%= select_tag('theme[id]', options_for_select(@themes.collect{ |theme| [theme.name, theme.id] })) %>
-
       <button type="submit" class="btn btn-danger">Get Advice</button>
-
       <% end %>
     </div>
   </ul>
 </div>
 
 <div class="abort-button">
-  <%= link_to "Abort!", twilio_path, method: :get %>
+  <div class="text-center">
+   <a href="/twilio" data-toggle="modal" class="btn btn-lg btn-circle btn-danger">Abort!</a>
+  <!-- <a href="/twilio" class="btn btn-default orange-circle-button">Abort!</a> -->
+  <!-- <%= link_to "Abort!", twilio_path, method: :get %> -->
 </div>
