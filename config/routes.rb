@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   resources :themes
   post '/' => 'themes#show'
   post 'users/edit' => 'users#edit'
-  post 'users/user_id' => 'users#delete_tip'
+  post 'users/:id/delete-tip'  => 'users#delete_tip', as: "delete-tip"
   # resources :twilio, only: [:index, :show]
 
   get 'signup', to: 'users#new'

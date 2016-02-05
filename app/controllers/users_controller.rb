@@ -24,11 +24,18 @@ class UsersController < ApplicationController
   end
 
   def edit
+    tip = Tip.find(params[:id])
+    current_user.tips << tip
   end
 
   def delete_tip
-    tip = Tip.find(params[:id])
+    tip = Tip.find(params[:tip_id])
     current_user.tips.delete(tip)
+    respond_to do |format|
+      binding.pry
+      format.js { }
+      format.html { redirect_to root_url  }
+    end
   end
 
   def destroy
