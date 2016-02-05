@@ -16,7 +16,6 @@
 //= require jquery_ujs
 //= require bootstrap-sprockets
 //= require turbolinks
-//= require bootstrap.min
 //= require hover-dropdown
 //= require jquery.easing.min
 //= require jquery.mixitup.min
