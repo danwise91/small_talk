@@ -20,6 +20,18 @@
 	<div id="royal_preloader"></div>
 
 	<!-- Begin Boxed or Fullwidth Layout -->
+	<div>
+
+		<% if flash[:error] %>
+	    <div>Error: <%= flash[:error] %></div>
+	  <% end %>
+
+	  <% if flash[:notice] %>
+	    <div><%= flash[:notice] %></div>
+	  <% end %>
+
+	</div>
+
 	<div id="bg-boxed">
 	    <div class="boxed">
 	    <!-- Begin Header -->

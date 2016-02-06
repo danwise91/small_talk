@@ -15,8 +15,6 @@ environment ENV['RACK_ENV'] || 'development'
 # end
 #
 # on_worker_boot do
-#   # ...
-#   if defined?(Sidekiq)
-#      Sidekiq.redis = ENV["REDISTOGO_URL"] || "localhost:6379"
-#   end
+#   # Valid on Rails 4.1+ using the `config/database.yml` method of setting `pool` size
+#   ActiveRecord::Base.establish_connection
 # end
