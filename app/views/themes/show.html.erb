@@ -1,11 +1,18 @@
+<%= link_to "Your Page", users_path(current_user) %><br>
 <%= link_to "Back", root_path %>
-<%= link_to "Your Page", users_path(current_user) %>
 
-<h1><%= @theme.name %></h1>
-<%= button_to "Refresh Article and Tip", action: "new", remote: true, theme: {id: @theme.id} %>
+<div class="text-center">
+  <h1><%= @theme.name %></h1>
+</div>
+<div class="text-center">
+  <div class="primary">
+<%= button_to "Refresh Article and Tip", action: "new", remote: true, theme: {id: @theme.id}%>
+  </div>
+</div>
 
 <div class="container-fluid">
   <ul>
+    <div class="bg-warning" style="width: 100%;">
     <strong>Custom Conversation Starter:</strong>
     <% post_title = @content.keys.sample %>
     <% post_url = @content[post_title] %>
@@ -15,14 +22,17 @@
     <% if post_url.include?("comments") %>
       <% reddit_post_id = post_url.split('/')[-2] %>
       <% end %>
+      <li><%= link_to formatted_title, post_url, target: "_blank" %></li><br>
+</div>
 
-
-      <li><%= link_to formatted_title, post_url, target: "_blank" %></li>
+<div class="bg-info" style="width: 100%;">
     <% @tip = @tips.sample %>
     <strong>Tip:</strong>
     <li><%=@tip.description %></li>
+    <div class="text-right">
     <%= button_to "Save Tip", '/users/edit', remote: true, params: {id: @tip.id} %>
-
+  </div>
+</div>
   </ul>
 
 </div>
