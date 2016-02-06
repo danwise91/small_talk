@@ -8,7 +8,7 @@ class ThemesController < ApplicationController
     @theme = Theme.find(params[:theme][:id])
     @tips = Tip.all
     @content = RedditScraper.new(@theme.id).scrape
-
   end
+
 
 end
