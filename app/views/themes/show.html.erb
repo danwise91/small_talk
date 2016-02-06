@@ -1,8 +1,7 @@
 <%= link_to "Back", root_path %>
-<%= link_to "Your Page", user_path(current_user) %>
+<%= link_to "Your Page", users_path(current_user) %>
 
 <h1><%= @theme.name %></h1>
-
 <%= button_to "Refresh Article and Tip", action: "new", remote: true, theme: {id: @theme.id} %>
 
 <div class="container-fluid">
