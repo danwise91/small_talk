@@ -44,7 +44,7 @@
               <iframe src="https://player.vimeo.com/video/70217963" width="500" height="281" style="border: none; border-width: 0px;"></iframe>
             </div><!-- /column -->
             <div class="col-sm-6">
-              <div class="heading mb20"><h4><span class="ion-android-developer mr15"></span>We Are Raleway</h4></div>
+              <div class="heading mb20"><h4><span class="ion-android-developer mr15"></span>We Are Small Talk.</h4></div>
               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam eu risus libero. Donec et lorem lacinia, <a class="tooltip-active" data-toggle="tooltip" data-placement="top" title="Tooltip on top">adipiscing</a> nunc nec, hendrerit sapien. Sed in scelerisque tortor. Praesent porttitor odio non ullamcorper gravida.</p>
               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam eu risus libero. Donec et lorem lacinisent porttitor odio non ullamcorper gravida.</p>
               <!-- List -->
@@ -68,15 +68,15 @@
           <!-- Title -->
           <div class="row">
             <div class="col-sm-12">
-              <p class="lead text-center"><b><mark>Should contain abort / explanation</mark></b><br></p>
+              <p class="lead text-center"><b>Should contain abort / explanation</b><br></p>
               <hr style="width:200px">
             </div>
           </div>
           <div class="row">
             <!-- Content 1 -->
-            <div class="abort-button">
+            <div>
               <div class="text-center">
-               <a href="/twilio" style= "display: block; width: 100%;", data-toggle="modal" class="btn btn-lg btn-danger">Abort!</a>
+               <a href="/twilio" style= "float: center; width: 15%; margin-bottom: 20px", data-toggle="modal" class="btn btn-lg btn-info">Abort!</a>
             </div>
           </div>
         </div><!-- /container -->
@@ -113,12 +113,12 @@
                   <div class="border">
                   <div class="view port-borderless portfolio-hover-1">
                     <!-- Project Thumb -->
-                    <a href="/themes/<%= theme.id %>">
-                    <%= image_tag "themes/stock#{theme.id}.jpg", class: "img-responsive", alt: "..." %> 
-                  </a>
+                      <a href="/themes/<%= theme.id %>">
+                        <%= image_tag "themes/stock#{theme.id}.jpg", class: "img-responsive", alt: "..." %> 
+                      </a>
               
                   <div class="portfolio-text background-white">
-                      <h3 class="portfolio-title"><a href="single-project.html">Beach</a></h3>
+                      <h3 class="portfolio-title"><a href="single-project.html"><%= theme.name %></a></h3>
                       <div class="project-category">Illustration</div>
                   </div>
                 </div>
@@ -145,7 +145,7 @@
 
 <div class="jumbotron text-center">
     <h1>Small Talk</h1>
-    <p>We'll make all your wildest dreams come true!</p>
+    <p>What to say, and how.</p>
 </div>
 
 <div id="container">
