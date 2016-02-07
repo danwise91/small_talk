@@ -1,26 +1,30 @@
 <div class="header">
-					<div class="container">
-						<div class="row">
-							<!-- Page Title -->
-							<div class="col-sm-6 col-xs-12">
-								<p><h2>Welcome <%="#{current_user.name}"%></p></h2>
+	<div class="container">
+		<div class="row">
+			<!-- Page Title -->
+			<div class="col-sm-6 col-xs-12">
+				<p><h2>Welcome <%="#{current_user.name}"%></p></h2>
 
-							</div>
+			</div>
 
-							<!-- Breadcrumbs -->
-							<div class="col-sm-6">
-								<ol class="breadcrumb">
+			<!-- Breadcrumbs -->
+			<div class="col-sm-6">
+				<ol class="breadcrumb">
 
-								</ol>
-							</div><!-- /column -->
-						</div><!-- /row -->
-					</div><!-- /container -->
-				</div>
-<% current_user.tips.each do |tip| %>
-<p><div class="fa-2x"><%= tip.description %></div></p>
-		<div class="button">
-			<%=link_to "Remove tip", delete_tip_path(current_user, tip_id: tip.id), method: :post, remote: true%>
-			<%#= button_to "Remove tip", remote: true, params: {id: tip.id} %>
-		</div>
+				</ol>
+			</div><!-- /column -->
+		</div><!-- /row -->
+	</div><!-- /container -->
+</div>
 
-<% end %>
+<div class="">
+	<%= if logged_in? %>
+		<% current_user.tips.each do |tip| %>
+			<p><div class="fa-2x"><%= tip.description %></div></p>
+			<div class="button">
+				<%=link_to "Remove tip", delete_tip_path(current_user, tip_id: tip.id), method: :post, remote: true%>
+				<%#= button_to "Remove tip", remote: true, params: {id: tip.id} %>
+			</div>
+		<% end %>
+	<% end %>
+</div>
