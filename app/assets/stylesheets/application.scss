@@ -2,6 +2,9 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 // @import "breakpoint";
+@import "font-awesome-sprockets";
+@import "font-awesome";
+// @import "compass";
 
 @import "style.css";
 @import "bootstrap-social";
@@ -21,8 +24,6 @@
 @import "ionicons";
 
 @import "magnific-popup";
-@import "font-awesome-sprockets";
-@import "font-awesome";
 @font-face {
     font-family: 'fontawesome';
     src: url('/assests/ionicons') format('woff'),

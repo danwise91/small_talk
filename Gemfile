@@ -7,7 +7,8 @@ gem 'font-awesome-sass'
 gem 'ionicons-rails'
 gem 'omniauth-facebook'
 gem 'dotenv-rails', :groups => [:development, :test]
-gem 'breakpoint'
+# gem 'breakpoint'
+# gem 'compass-rails'
 
 gem 'twilio-ruby'
 gem 'phony_rails'
