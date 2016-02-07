@@ -7,6 +7,7 @@ class UsersController < ApplicationController
   end
 
   def show
+    @user = set_user
   end
 
   def new
@@ -15,22 +16,26 @@ class UsersController < ApplicationController
 
   def create
     @user = User.new(user_params)
-  if @user.save
-    session[:user_id] = @user.id
-    redirect_to '/', notice: "Thank you for signing up!"
-  else
-    render :new
-  end
+    if @user.save
+      session[:user_id] = @user.id
+      redirect_to '/', notice: "Thank you for signing up!"
+    else
+      render :new
+    end
   end
 
   def edit
     tip = Tip.find(params[:id])
-    current_user.tips << tip
+    current_user.tips.push(tip)
+    respond_to do |format|
+      format.js { }
+      format.html { redirect_to root_url  }
+    end
   end
 
   def delete_tip
-    tip = Tip.find(params[:tip_id])
-    # current_user.tips.delete(tip)
+    @tip = Tip.find(params[:tip_id])
+    current_user.tips.delete(@tip)
     respond_to do |format|
       format.js { }
       format.html { redirect_to root_url  }
@@ -51,6 +56,6 @@ class UsersController < ApplicationController
     end
 
     def user_params
-      params.require(:user).permit(:name, :email, :password, :password_confirmation)
+      params.require(:user).permit(:name, :id, :email, :password, :password_confirmation)
     end
 end

@@ -4,8 +4,8 @@ Rails.application.routes.draw do
   resources :sessions
   resources :themes
   post '/' => 'themes#show'
-  post 'users/edit' => 'users#edit'
   post 'users/:id/delete-tip'  => 'users#delete_tip', as: "delete-tip"
+  post 'users/:id/edit' => 'users#edit'
   # resources :twilio, only: [:index, :show]
 
   get 'signup', to: 'users#new'

@@ -1,4 +1,4 @@
-<%= link_to "Your Page", users_path(current_user) %><br>
+<%= link_to "Your Page", user_path(current_user) %><br>
 <%= link_to "Back", root_path %>
 
 <div class="text-center">
@@ -23,18 +23,17 @@
       <% reddit_post_id = post_url.split('/')[-2] %>
       <% end %>
       <li><%= link_to formatted_title, post_url, target: "_blank" %></li><br>
-</div>
+    </div>
 
-<div class="bg-info" style="width: 100%;">
+    <div class="bg-info" style="width: 100%;">
     <% @tip = @tips.sample %>
     <strong>Tip:</strong>
     <li><%=@tip.description %></li>
-    <div class="text-right">
-    <%= button_to "Save Tip", '/users/edit', remote: true, params: {id: @tip.id} %>
-  </div>
-</div>
+      <div class="text-right">
+      <%= button_to "Save Tip", edit_user_path(current_user), remote: true, params: {id: @tip.id} %>
+      </div>
+    </div>
   </ul>
-
 </div>
 
 <div id="container">
