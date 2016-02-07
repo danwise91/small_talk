@@ -1,0 +1,32 @@
+<div id="slider3" class="carousel slide" data-ride="carousel">
+  <!-- Indicators -->
+  <ol class="carousel-indicators carousel-indicators-caption">
+    <li data-target="#slider3" data-slide-to="0" class="active"></li>
+    <li data-target="#slider3" data-slide-to="1"></li>
+  </ol>
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner">
+    <div class="item active">
+      <%= image_tag "backgrounds/bg7.jpg", class: "img-responsive", alt: "Small Talk carousel 1" %>
+      <div class="carousel-caption fadeInUpBig-animated">
+                  <h3 class="no-margin text-white">Slide Title</h3>
+                  <p class="text-light-grey hidden-xs no-margin">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              </div>
+    </div>
+    <div class="item">
+      <%= image_tag "backgrounds/bg8.jpg", class: "img-responsive", alt: "Small Talk carousel 2" %>
+      <div class="carousel-caption fadeInUpBig-animated">
+                  <h3 class="no-margin text-white">Slide Title 2</h3>
+                  <p class="text-light-grey hidden-xs no-margin">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              </div>
+    </div>
+  </div>
+
+  <!-- Controls -->
+  <a class="left carousel-control" href="#slider3" role="button" data-slide="prev">
+    <span class="ion-ios7-arrow-left carousel-arrow-left" aria-hidden="true"></span>
+  </a>
+  <a class="right carousel-control" href="#slider3" role="button" data-slide="next">
+    <span class="ion-ios7-arrow-right carousel-arrow-right" aria-hidden="true"></span>
+  </a>
+</div>
