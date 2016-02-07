@@ -1,18 +1,30 @@
 
 <!-- Begin Top Bar -->
 <div class="top-bar">
-  <div class="container container-header">
+  <div class="container-header">
     <div class="row top-bar-row">
       <!-- Address and Phone -->
+      <div class="col-sm-6 text-left topmenu-holder">
+        <a href="<% root_path %>" class="navbar-brand">
+          <div class="css-logo"></div>
+          <%= image_tag 'logo.png', class: 'raleway-logo', alt: 'smalltalktome' %>
+        </a>
+      </div>
       <!-- <div class="col-sm-7 hidden-xs contact-info">
         <span class="ion-android-system-home home-icon"></span>Bright Passage, Fond du Lac, 63138 USA<span class="ion-ios7-telephone phone-icon"></span>1702983921
       </div> -->
       <!-- Social Buttons -->
-      <div class="col-sm-12 text-right topmenu-holder">
+      <div class="col-sm-6 text-right topmenu-holder">
         <ul class="topbar-list list-inline">
-          <li><a href="/login">Log In</a></li>
-          <li><a href="/signup">Sign Up</a></li>
-          <li><a href="/auth/facebook">Log In With Facebook</a></li>
+          <% if logged_in? -%>
+            <li>  Current user is: <%= current_user.name  %></li>
+            <li><%= link_to "Log Out", sessions_path, method: :delete %></li>
+            <li><%= link_to "Your page", user_path(current_user) %></li>
+          <% else -%>
+            <li><a href="/auth/facebook">Log In With Facebook</a></li>
+            <li><a href="/login">Log In</a></li>
+            <li><a href="/signup">Sign Up</a></li>
+          <% end -%>
           <li>
             <a class="btn btn-social-icon btn-rw btn-primary btn-xs"><i class="fa fa-twitter"></i></a>
           </li>
