@@ -18,7 +18,7 @@
 </div>
 
 <div class="">
-	<%= if logged_in? %>
+
 		<% current_user.tips.each do |tip| %>
 			<p><div class="fa-2x"><%= tip.description %></div></p>
 			<div class="button">
@@ -26,5 +26,5 @@
 				<%#= button_to "Remove tip", remote: true, params: {id: tip.id} %>
 			</div>
 		<% end %>
-	<% end %>
+
 </div>
