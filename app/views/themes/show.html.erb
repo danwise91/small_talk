@@ -3,7 +3,7 @@
 </div>
 <div class="text-center">
   <div class="primary">
-<%= button_to "Refresh Article and Tip", action: "new", remote: true, theme: {id: @theme.id}%>
+    <%= button_to "Refresh Article and Tip", action: "new", remote: true, id: @theme.id %>
   </div>
 </div>
 
@@ -27,7 +27,7 @@
     <strong>Tip:</strong>
     <li><%=@tip.description %></li>
       <div class="text-right">
-        <div class="">
+        <div class="" id="save_tip">
         	<% if logged_in? %>
             <%= button_to "Save Tip", edit_user_path(current_user), remote: true, params: {id: @tip.id} %>
           <% end %>
