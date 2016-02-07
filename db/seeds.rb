@@ -4,16 +4,16 @@ Theme.delete_all
 Subreddit.delete_all
 Tip.delete_all
 
-hipster = Theme.create(id: 1, name: "hipster")
-goth = Theme.create(id: 2, name: "goth")
-gamer = Theme.create(id: 3,name: "gamer")
-pretentious = Theme.create(id: 4, name: "pretentious")
-classy_drinkers = Theme.create(id: 5,name: "classy drinkers")
-sports_fans = Theme.create(id: 6, name: "sports fans")
-bored_housewives = Theme.create(id: 7, name: "bored housewives")
-history_nerds = Theme.create(id: 8, name: "history nerds")
-science_nerds = Theme.create(id: 9, name: "science nerds")
-general = Theme.create(id: 10, name: "general")
+hipster = Theme.create(id: 1, name: "hipster", category: "social")
+goth = Theme.create(id: 2, name: "goth", category: "mixer")
+gamer = Theme.create(id: 3,name: "gamer", category: "social")
+pretentious = Theme.create(id: 4, name: "pretentious", category: "networking")
+classy_drinkers = Theme.create(id: 5,name: "classy drinkers", category: "social")
+sports_fans = Theme.create(id: 6, name: "sports fans", category: "mixer")
+bored_housewives = Theme.create(id: 7, name: "bored housewives", category: "mixer")
+history_nerds = Theme.create(id: 8, name: "history nerds", category: "social")
+science_nerds = Theme.create(id: 9, name: "science nerds", category: "social")
+general = Theme.create(id: 10, name: "general", category: "networking")
 
 # hipster subreddits
 beard = Subreddit.create(id: 1, url: "https://www.reddit.com/r/BeardTalk", theme: hipster)
