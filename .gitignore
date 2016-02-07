@@ -15,5 +15,6 @@
 dump.rdb
 secrets.yml
 Raleway-WB09054T6
+.DS_Store
 
 public/assets
