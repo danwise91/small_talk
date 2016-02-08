@@ -5,22 +5,22 @@ class SessionsController < ApplicationController
   end
 
   def create
-    if params[:commit] == "Log In"
+    if params[:provider] == "facebook"
+      # binding.pry
+      user = User.from_omniauth(env["omniauth.auth"])
+      session[:user_id] = user.id
+      redirect_to root_path
+    else
       @user = User.find_by(email: params[:user][:email])
       if @user && @user.authenticate(params[:user][:password])
         session[:user_id] = @user.id
         redirect_to '/', notice: "Hello, #{current_user.name}!"
       else
 
-     @user = User.new
+        @user = User.new
         flash.now[:error] = "Bad Username or Password"
         render :new
       end
-    else
-      # binding.pry
-    user = User.from_omniauth(env["omniauth.auth"])
-    session[:user_id] = user.id
-    redirect_to root_path
   end
 end
 
