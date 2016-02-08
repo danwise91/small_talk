@@ -3,7 +3,6 @@
 Theme.delete_all
 Subreddit.delete_all
 Tip.delete_all
-user = User.create(id: 1, name: 'fake_user', email: 'fake_email@email.com', password_digest: 'beeeeeeef')
 
 hipster = Theme.create(id: 1, name: "hipster", category: "social")
 club = Theme.create(id: 2, name: "clubbing", category: "mixer")

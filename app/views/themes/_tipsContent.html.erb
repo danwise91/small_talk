@@ -18,8 +18,13 @@
   <h3><li><%=tip.description %></li></h3>
     <div class="text-left">
       <div class="mt15" id="save_tip">
-        <% if logged_in? %>
+        <% if logged_in? && current_user.tips.include?(tip) %>
+        <h4><%="Tip already saved"%></h4>
+        <% elsif logged_in?%>
           <h4><%= link_to "Save Tip", edit_user_path(current_user, tip_id: tip.id), remote: true, method: :post%></h4>
+          <% else %>
+            <h4><%= link_to "Log in or Sign up to save tips", new_user_path%></h4>
+
         <% end %>
       </div>
     </div>
