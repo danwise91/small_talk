@@ -1,32 +1,101 @@
-<div id="slider3" class="carousel slide" data-ride="carousel">
-  <!-- Indicators -->
-  <ol class="carousel-indicators carousel-indicators-caption">
-    <li data-target="#slider3" data-slide-to="0" class="active"></li>
-    <li data-target="#slider3" data-slide-to="1"></li>
-  </ol>
-  <!-- Wrapper for slides -->
-  <div class="carousel-inner">
-    <div class="item active">
-      <%= image_tag "backgrounds/bg7.jpg", class: "img-responsive", alt: "Small Talk carousel 1" %>
-      <div class="carousel-caption fadeInUpBig-animated">
-                  <h3 class="no-margin text-white">Slide Title</h3>
-                  <p class="text-light-grey hidden-xs no-margin">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-              </div>
-    </div>
-    <div class="item">
-      <%= image_tag "backgrounds/bg8.jpg", class: "img-responsive", alt: "Small Talk carousel 2" %>
-      <div class="carousel-caption fadeInUpBig-animated">
-                  <h3 class="no-margin text-white">Slide Title 2</h3>
-                  <p class="text-light-grey hidden-xs no-margin">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-              </div>
-    </div>
-  </div>
+<!-- Begin Carousel -->
+<div class="carousel">
+  <div id="carouselHome" class="carousel slide carousel-fade" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#carouselHome" data-slide-to="0" class="active"></li>
+      <li data-target="#carouselHome" data-slide-to="1"></li>
+      <li data-target="#carouselHome" data-slide-to="2"></li>
+    </ol>
 
-  <!-- Controls -->
-  <a class="left carousel-control" href="#slider3" role="button" data-slide="prev">
-    <span class="ion-ios7-arrow-left carousel-arrow-left" aria-hidden="true"></span>
-  </a>
-  <a class="right carousel-control" href="#slider3" role="button" data-slide="next">
-    <span class="ion-ios7-arrow-right carousel-arrow-right" aria-hidden="true"></span>
-  </a>
-</div>
+    <!-- Begin Wrapper for slides -->
+    <div class="carousel-inner">
+
+      <!-- Begin Item 1 -->
+      <div class="item active">
+        <!-- Item BG -->
+        <div class="background-main" style="background-image:url('<%= asset_path("backgrounds/bg7.jpg") %>');" data-0="background-position:0px 0px;" data-500="background-position:0px -250px;">
+          <div class="container">
+            <div class="row carousel-content center-vertically-right">
+              <!-- Content -->
+              <div class="fadeInRight-animated" data-animation="fadeInRight">
+                <div class="carousel-description col-sm-5">
+                  <h3 class="heavy text-white"><span class="carousel-title-bgclear">Clean Code + Design</span></h3><h3 class="heavy text-white"><span class="carousel-title-bgclear">HTML5 and CSS3</span></h3><h3 class="heavy text-white"><span class="carousel-title-bgclear">70+ Pages Total</span></h3>
+                  <p>With over 90% of Bootstraps components restyled, over 35 pages of shortcode features, and over 30 pages for you to use, this is the <b>ultimate</b> parallax, responsive Bootstrap 3 template.</p>
+                </div>
+              </div>
+              <div class="fadeInLeft-animated" data-animation="fadeInLeft">
+                <div class="col-sm-6 col-sm-offset-1">
+                  <%= image_tag 'showcase-full.png', class: 'img-responsive carousel-image', alt: 'Responsive Showcase' %>
+                </div>
+              </div>
+            </div><!-- /content container -->
+          </div><!-- /container -->
+        </div><!-- /bg div -->
+      </div><!-- /item -->
+      <!-- End Item 1 -->
+
+      <!-- Begin Item 2 -->
+      <div class="item">
+        <!-- Item BG -->
+        <div style="background-image:url('<%= asset_path("backgrounds/bg8.jpg") %>');" data-0="background-position:0px 0px;" data-500="background-position:0px -250px;">
+          <div class="container">
+            <div class="row carousel-content center-vertically-left">
+              <!-- Img -->
+              <div class="fadeInLeft-animated" data-animation="fadeInLeft">
+                <div class="col-sm-6 hidden-xs">
+                  <%= image_tag 'showcase2.png', class: 'img-responsive carousel-image', alt: 'Responsive Showcase' %>
+                </div>
+              </div>
+              <!-- Content -->
+              <div class="fadeInRight-animated" data-animation="fadeInRight">
+                <div class="carousel-description mt10 col-sm-5 col-sm-offset-1">
+                  <h4 class="heavy text-white"><span class="carousel-title-bg">Many Javascript Plugins</span></h4>
+                  <h4 class="heavy text-white"><span class="carousel-title-bg">Responsive Video Content</span></h4>
+                  <h4 class="heavy text-white"><span class="carousel-title-bg">Shortcodes Pages + Docs</span></h4>
+                  <p>Flexible for any project. And hey, we made sure you have all the features you need for any website. Also shortcodes on every features page, just copy & paste where you need.</p>
+                  <a href="features.html" class="btn btn-rw btn-primary">
+                    Features &nbsp;&nbsp;<span class="ion-ios7-arrow-right"></span>
+                  </a>
+                </div>
+              </div>
+            </div><!-- /content container -->
+          </div><!-- /container -->
+        </div><!-- /bg div -->
+      </div><!-- /item -->
+      <!-- End Item 2 -->
+
+      <!-- Begin Item 3 -->
+      <div class="item">
+        <!-- Item BG -->
+        <div style="background-image:url('<%= asset_path("backgrounds/bg9.jpg") %>');" data-0="background-position:0px 0px;" data-500="background-position:0px -250px;">
+          <div class="container">
+            <div class="row carousel-content center-vertically-right">
+              <div class="fadeInUpBig-animated" data-animation="fadeInUpBig">
+                <div class="carousel-description col-sm-8 col-sm-offset-2 text-center">
+                  <!-- Content -->
+                  <span class="fa fa-heartbeat fa-4x text-white"></span>
+                  <h2 class="heavy text-white"><span class="carousel-title-bgclear">Clean Code + Design</span></h2>
+                  Raleway comes packed with over 30 pages and 50 components. All restyled to refresh your visitors. We have pricing tables, 404 pages, coming soon pages, about pages, and many more.<br>
+                </div>
+              </div>
+            </div><!-- /content container -->
+          </div><!-- /container -->
+        </div><!-- /bg div -->
+      </div><!-- /item -->
+      <!-- End Item 3 -->
+
+    </div><!-- /carousel inner -->
+    <!-- End Wrapper for slides -->
+
+    <!-- Controls -->
+    <a class="left carousel-control" href="#carouselHome" role="button" data-slide="prev">
+      <span class="ion-ios7-arrow-left carousel-arrow-left" aria-hidden="true"></span>
+    </a>
+    <a class="right carousel-control" href="#carouselHome" role="button" data-slide="next">
+      <span class="ion-ios7-arrow-right carousel-arrow-right" aria-hidden="true"></span>
+    </a>
+
+  </div><!-- /carousel id div -->
+</div><!-- /carousel div -->
+<!-- End Carousel -->
