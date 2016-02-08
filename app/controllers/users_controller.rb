@@ -26,14 +26,13 @@ class UsersController < ApplicationController
 
   def edit
     tip = Tip.find(params[:tip_id])
-    binding.pry
     unless current_user.tips.include?(tip)
       current_user.tips.push(tip)
       current_user.save
-    end
     respond_to do |format|
       format.js { }
       format.html { redirect_to root_url  }
+    end
     end
   end
 

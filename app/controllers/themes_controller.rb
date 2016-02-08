@@ -18,6 +18,11 @@ class ThemesController < ApplicationController
   def refresh
     @tips = Tip.all
     @content = RedditScraper.new(params[:id].to_i).scrape
+    respond_to do |format|
+      # binding.pry
+      format.js { }
+     format.html { }
+   end
   end
 
 end
