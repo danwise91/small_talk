@@ -12,9 +12,9 @@
     <div data-sr="enter left" class="row mb30">
       <ul class="nav nav-pills col-xs-12 text-center">
         <li class="filter" data-filter="all">All</li>
-        <li class="filter" data-filter="print">Networking?</li>
-        <li class="filter" data-filter="web">Purely Social?</li>
-        <li class="filter" data-filter="illustration">Singles Mixer</li>
+        <li class="filter" data-filter="networking">Networking</li>
+        <li class="filter" data-filter="social">Purely Social</li>
+        <li class="filter" data-filter="mixer">Singles Mixer</li>
       </ul>
     </div>
 
@@ -23,13 +23,13 @@
       <ul id="myPortfolio" class="col-sm-12 no-padding text-center">
         <!-- Begin Item 1 -->
         <% @themes.each do |theme| %>
-          <li onclick="" class="item illustration col-sm-4">
+          <li onclick="" class="item <%= theme.category %> col-sm-4">
             <div class="border">
               <!-- Project Thumb -->
               <a href="/themes/<%= theme.id %>">
                 <%= image_tag "themes/stock#{theme.id}.jpg", class: "img-responsive", alt: "..." %>
               </a>
-              
+
               <div class="caption">
                 <h2><%= theme.name %></h2>
               </div>
