@@ -29,10 +29,10 @@
     <li><%=@tip.description %></li>
       <div class="text-right">
         <div class="" id="save_tip">
-        	<% if logged_in? %>
+        	<% if logged_in? -%>
 
-            <%= button_to "Save Tip", edit_user_path(current_user, tip_id: @tip.id), remote: true%>
-          <% end %>
+            <%= button_to "Save Tip", edit_user_path(current_user, tip_id: @tip.id), remote: true %>
+          <% end -%>
         </div>
       </div>
     </ul>

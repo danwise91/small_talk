@@ -20,7 +20,7 @@
 <div class="">
 
 		<% current_user.tips.each do |tip| %>
-			<p><div class="fa-2x"><%= tip.description %></div></p>
+			<p><div class="fa-2x <%=tip.id%>"><%= tip.description %></div></p>
 			<div class="button">
 				<%=link_to "Remove tip", delete_tip_path(current_user, tip_id: tip.id), method: :post, remote: true%>
 				<%#= button_to "Remove tip", remote: true, params: {id: tip.id} %>
