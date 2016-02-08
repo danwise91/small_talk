@@ -4,3 +4,22 @@
     padding-right: 18px;
     color: black;
 }
+
+    .caption {
+        width:100%;
+        bottom: .3rem;
+        position: absolute;
+      
+    }
+
+    .thumbnail {
+        border: 0 none;
+        box-shadow: none;
+        margin:0;
+        padding:0;
+    }
+
+    .caption h4 {
+        color: #fff;
+        -webkit-font-smoothing: antialiased;
+    }

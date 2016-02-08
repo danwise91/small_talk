@@ -55,6 +55,8 @@ Author:Denis Samardjiev
 
 /* =Common Styles
 -------------------------------------------------------------- */
+
+
 body {
 	background:#fff;
 	font:normal 14px 'Open Sans', sans-serif;
@@ -302,6 +304,8 @@ ul.list-arrow-2-color li:before {
 	background-color:#ff7454;
 	border-color:#FF8B70;
 }
+
+
 
 /* =Buttons
 -------------------------------------------------------------- */
