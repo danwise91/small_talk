@@ -5,7 +5,7 @@ require 'pry'
 class RedditScraper
 	attr_accessor :html, :url
 
-	REDDIT_URLS = { 
+	REDDIT_URLS = {
 		# hipster
 		1 => Subreddit.where(theme_id: 1),
 		# goth
@@ -13,17 +13,17 @@ class RedditScraper
 		# gamer
 		3 => Subreddit.where(theme_id: 3),
 		# pretentious
-		4 => Subreddit.where(theme_id: 4), 
+		4 => Subreddit.where(theme_id: 4),
 		# classy drinkers
-		5 => Subreddit.where(theme_id: 5), 
+		5 => Subreddit.where(theme_id: 5),
 		# sports fans
 		6 => Subreddit.where(theme_id: 6),
 		# bored housewives
-		7 => Subreddit.where(theme_id: 7), 
+		7 => Subreddit.where(theme_id: 7),
 		# history nerds
-		8 => Subreddit.where(theme_id: 8), 
+		8 => Subreddit.where(theme_id: 8),
 		# science nerds
-		9 => Subreddit.where(theme_id: 9), 
+		9 => Subreddit.where(theme_id: 9),
 		# general
 		10 => Subreddit.where(theme_id: 10)
 	}
