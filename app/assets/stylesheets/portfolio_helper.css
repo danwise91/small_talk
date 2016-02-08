@@ -1,9 +1,9 @@
 
 .caption {
     width:100%;
-    bottom: .3rem;
+    bottom: 1rem;
     position: absolute;
-  
+    text-align: center;
 }
 
 .thumbnail {
@@ -17,5 +17,7 @@
     display: block;
     color: #fff;
     -webkit-font-smoothing: antialiased;
-    text-shadow: 1px 1px #000;
+    text-shadow: 2px 2px #000;
+    margin-right: 10%;
+    margin-bottom: 20%;
 }

@@ -6,11 +6,11 @@ Tip.delete_all
 
 hipster = Theme.create(id: 1, name: "hipster", category: "social")
 club = Theme.create(id: 2, name: "clubbing", category: "mixer")
-gamer = Theme.create(id: 3,name: "gamer", category: "social")
+gamer = Theme.create(id: 3,name: "gaming", category: "social")
 coworkers = Theme.create(id: 4, name: "work happy hour", category: "networking")
 classy_drinkers = Theme.create(id: 5,name: "classy drinkers", category: "social")
 sports_fans = Theme.create(id: 6, name: "sports fans", category: "mixer")
-bored_housewives = Theme.create(id: 7, name: "bored housewives", category: "mixer")
+date_night = Theme.create(id: 7, name: "date night", category: "mixer")
 history_nerds = Theme.create(id: 8, name: "history nerds", category: "social")
 science_nerds = Theme.create(id: 9, name: "science nerds", category: "social")
 general = Theme.create(id: 10, name: "general", category: "networking")
@@ -27,8 +27,8 @@ obscure_knowledge = Subreddit.create(id: 3, url: "https://www.reddit.com/r/crapp
 classic_cocktails = Subreddit.create(id: 4, url: "https://www.reddit.com/r/classiccocktails", theme: classy_drinkers)
 #sports fan subreddits
 sports_trivia = Subreddit.create(id: 5, url: "https://www.reddit.com/r/sportstrivia", theme: sports_fans)
-#bored housewives subreddits
-housekeeping = Subreddit.create(id: 6, url: "https://www.reddit.com/r/housekeeping", theme: bored_housewives)
+# date night subreddits
+dating_advice = Subreddit.create(id: 6, url: "https://www.reddit.com/r/dating_advice/", theme: date_night)
 #history nerds subreddits
 historyanecdotes = Subreddit.create(id: 7, url: "https://www.reddit.com/r/askhistory", theme: history_nerds)
 #science nerds subreddits
