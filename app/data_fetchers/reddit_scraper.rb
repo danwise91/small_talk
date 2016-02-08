@@ -8,24 +8,27 @@ class RedditScraper
 	REDDIT_URLS = {
 		# hipster
 		1 => Subreddit.where(theme_id: 1),
-		# goth
+		# clubbing
 		2 => Subreddit.where(theme_id: 2),
 		# gamer
 		3 => Subreddit.where(theme_id: 3),
-		# pretentious
+		# work happy hour
 		4 => Subreddit.where(theme_id: 4),
 		# classy drinkers
 		5 => Subreddit.where(theme_id: 5),
 		# sports fans
 		6 => Subreddit.where(theme_id: 6),
-		# bored housewives
+		# date night
 		7 => Subreddit.where(theme_id: 7),
 		# history nerds
 		8 => Subreddit.where(theme_id: 8),
 		# science nerds
 		9 => Subreddit.where(theme_id: 9),
 		# general
-		10 => Subreddit.where(theme_id: 10)
+		10 => Subreddit.where(theme_id: 10), 
+		# pretentious
+		11 => Subreddit.where(theme_id: 11),
+		# suburban living
 	}
 
   def initialize(theme_id)
