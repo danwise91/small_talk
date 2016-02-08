@@ -19,7 +19,6 @@ class ThemesController < ApplicationController
     @tips = Tip.all
     @content = RedditScraper.new(params[:id].to_i).scrape
     respond_to do |format|
-      # binding.pry
       format.js { }
      format.html { }
    end

@@ -3,8 +3,9 @@
 		<div class="row">
 			<!-- Page Title -->
 			<div class="col-sm-6 col-xs-12">
+				<div class="text-center">
 				<p><h2>Welcome <%="#{current_user.name}"%></p></h2>
-
+			</div>
 			</div>
 
 			<!-- Breadcrumbs -->
@@ -18,6 +19,13 @@
 </div>
 
 <div class="">
+	<% if current_user.tips.length == 0 %>
+	<h4><div class="text-center">
+		Save some tips to view them here!
+		<%= link_to "View a random tip", '../themes/10' %>
+	</div></h4>
+
+	<% end %>
 
 		<% current_user.tips.each do |tip| %>
 			<p><div class="fa-2x <%=tip.id%>"><%= tip.description %></div></p>
