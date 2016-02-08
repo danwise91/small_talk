@@ -8,34 +8,8 @@
 </div>
 
 <div class="container-fluid">
-<%= render partial: "themes/tipsContent", locals: {tips: @tips, content: @content}%>
-  <ul>
-    <div class="bg-warning" style="width: 100%;">
-    <strong>Custom Conversation Starter:</strong>
-    <% post_title = @content.keys.sample %>
-    <% post_url = @content[post_title] %>
-    <% formatted_title = post_title.gsub(/TIL/, "") %>
-    <% formatted_title[0].upcase! %>
-
-    <% if post_url.include?("comments") %>
-      <% reddit_post_id = post_url.split('/')[-2] %>
-      <% end %>
-      <li><%= link_to formatted_title, post_url, target: "_blank" %></li><br>
-    </div>
-
-    <div class="bg-info" style="width: 100%;">
-    <% @tip = @tips.sample %>
-    <strong>Tip:</strong>
-    <li><%=@tip.description %></li>
-      <div class="text-right">
-        <div class="" id="save_tip">
-        	<% if logged_in? %>
-
-            <%= button_to "Save Tip", edit_user_path(current_user, tip_id: @tip.id), remote: true%>
-          <% end %>
-        </div>
-      </div>
-    </ul>
+<%= render partial: "themes/tipsContent", locals: {tips: @tips, content: @content} %>
+  
 </div>
 
 <!-- 1) themes/ _tips+comments.html.erb  ul id="refresh", local variables tips contents jrender partial: "tips",  contents: {tips @tips contents: @contents}
