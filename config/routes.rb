@@ -30,6 +30,8 @@ Rails.application.routes.draw do
   get 'auth/failure', to: redirect('/')
   get 'signout', to: 'sessions#destroy', as: 'signout'
 
+  get '/terms' => 'users#terms', as: 'terms'
+
   resources :sessions, only: [:create, :destroy]
   resources :home, only: [:show]
 
