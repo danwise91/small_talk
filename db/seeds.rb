@@ -4,25 +4,23 @@ Theme.delete_all
 Subreddit.delete_all
 Tip.delete_all
 
-hipster = Theme.create(id: 1, name: "hipster", category: "social")
-club = Theme.create(id: 2, name: "clubbing", category: "mixer")
-gamer = Theme.create(id: 3,name: "gaming", category: "social")
-coworkers = Theme.create(id: 4, name: "work happy hour", category: "networking")
+programmers = Theme.create(id: 1, name: "programmers", category: "networking")
+general = Theme.create(id: 2, name: "general mix", category: "networking")
+gamer = Theme.create(id: 3,name: "gamers", category: "social")
+coworkers = Theme.create(id: 4, name: "work friends", category: "networking")
 classy_drinkers = Theme.create(id: 5,name: "classy drinkers", category: "social")
-sports_fans = Theme.create(id: 6, name: "sports fans", category: "mixer")
+sports_fans = Theme.create(id: 6, name: "sports fans", category: "casual")
 date_night = Theme.create(id: 7, name: "date night", category: "mixer")
-history_nerds = Theme.create(id: 8, name: "history nerds", category: "social")
-science_nerds = Theme.create(id: 9, name: "science nerds", category: "social")
-general = Theme.create(id: 10, name: "general", category: "networking")
-pretentious = Theme.create(id: 11, name: "pretentious", category: "networking")
-suburban = Theme.create(id: 12, name: "suburban living", category: "mixer")
+history_nerds = Theme.create(id: 8, name: "history buffs", category: "social")
+science_nerds = Theme.create(id: 9, name: "scientists", category: "social")
+club = Theme.create(id: 10, name: "club pals", category: "mixer")
+hipster = Theme.create(id: 11, name: "hipsters", category: "social")
+suburban = Theme.create(id: 12, name: "suburban citizens", category: "mixer")
 
 
 # hipster subreddits
 beard = Subreddit.create(id: 1, url: "https://www.reddit.com/r/BeardTalk", theme: hipster)
 starbucks = Subreddit.create(id: 2, url: "https://www.reddit.com/r/starbucks", theme: hipster)
-#pretentious subreddits
-obscure_knowledge = Subreddit.create(id: 3, url: "https://www.reddit.com/r/crappydesign", theme: pretentious)
 #classy drinkers subreddits
 classic_cocktails = Subreddit.create(id: 4, url: "https://www.reddit.com/r/classiccocktails", theme: classy_drinkers)
 #sports fan subreddits
@@ -43,6 +41,8 @@ dance = Subreddit.create(id: 11, url: "https://www.reddit.com/r/Dance", theme: c
 business = Subreddit.create(id: 12, url: "https://www.reddit.com/r/business/", theme: coworkers)
 # suburban subreddits
 housekeeping = Subreddit.create(id: 13, url: "https://www.reddit.com/r/housekeeping/", theme: suburban)
+
+
 
 tip1 = Tip.create(id: 1, url: 'https://google.com', description: "You don't want anything, you don't need anything, so don't approach with a goal in mind. There is nothing wrong with approaching a beautiful/handsome person, but your intent can be toxic. I keep in mind that I do not know this person, so how can I possibly want something? I approach with no intent to get anything but to give something. My time. I don't expect everyone to want it but I give it. I extend the invitation of friendship. If there is a spark that I feel beyond what is on the surface then I will project my feeling and extend an invitation to join me. At no point do I expect anything from anybody as I wouldn't want anyone to expect something from me.")
 tip2 = Tip.create(id: 2, url: 'https://google.com', description: 'Your mood is contagious. When you are closed off or nervous, those around you respond to these emotions. Learn to be the one who drives the mood of the moment. As you become comfortable and carefree so will the person you are engaged with. Learn to project your mood onto others.')
