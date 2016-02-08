@@ -25,9 +25,12 @@ class UsersController < ApplicationController
   end
 
   def edit
-    binding.pry
     tip = Tip.find(params[:tip_id])
-    current_user.tips.push(tip)
+    binding.pry
+    unless current_user.tips.include?(tip)
+      current_user.tips.push(tip)
+      current_user.save
+    end
     respond_to do |format|
       format.js { }
       format.html { redirect_to root_url  }
@@ -36,7 +39,7 @@ class UsersController < ApplicationController
 
   def delete_tip
     tip = Tip.find(params[:tip_id])
-    current_user.tips.delete(tip)
+    current_user.tips.destroy(tip)
     respond_to do |format|
       format.js { }
       format.html { redirect_to root_url  }
