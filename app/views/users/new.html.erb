@@ -12,25 +12,51 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :name %><br>
-    <%= f.text_field :name %><br>
+  <div class="form">
+    <div style = "width: 250px">
+    <!-- <%= f.label :name %><br> -->
+    <%= f.text_field :name, class: 'form-control', autofocus: true, placeholder: "Your Name"%><br>
+<!-- <%=f.text_field :name, class: 'form-control', autofocus: true, placeholder: 'First Name'%><br> -->
+      </div>
   </div>
 
   <div class="email">
-    <%= f.label :email %>
-    <%= f.text_field :email %>
-  </div>
-  <div class="password">
-    <%= f.label :password %>
-    <%= f.password_field :password %>
-  </div>
-  <div class="">
-    <%= f.label :password_confirmation %>
-    <%= f.password_field :password_confirmation %>
+    <!-- <%= f.label :email %>
+    <%= f.text_field :email %> -->
+    <div style="width: 250px">
+    <%= f.text_field :email, class: 'form-control', autofocus: true, placeholder: "email"%><br>
+      </div>
   </div>
 
+
+  <div class="password">
+    <div style="width: 250px">
+    <!-- <%= f.label :password %> -->
+  <!-- <%= f.password_field :password %> -->
+    <%= f.password_field :password, class: 'form-control', autofocus: true, placeholder: "Make between 8-15 characters"%><br>
+
+      </div>
+  </div>
+
+  <div class="">
+    <div style="width: 250px">
+    <!-- <%= f.label :password_confirmation %>
+    <%= f.password_field :password_confirmation %> -->
+    <%= f.password_field :password, class: 'form-control', autofocus: true, placeholder: "Please confirm"%><br>
+      </div>
+  </div>
+      By creating an account, you are agreeing with our <a href="/terms">Terms and Conditions</a>
   <div class="actions">
-      <%= f.submit "Sign Up" %>
+      <%= f.submit "Sign Up",  class: "btn btn-primary", style: "width: 300px" %>
   </div>
 <% end %>
+
+
+<!-- <p align="right">
+  Its
+  always
+  time
+  for
+  some
+  small
+  talk</p> -->
