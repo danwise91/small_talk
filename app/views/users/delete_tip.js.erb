@@ -1,2 +1,4 @@
-// $(".fa-2x").remove()
-// $(".button").remove()
+<% myclass = ".fa-2x.#{@tip.id}" %>
+$('<%= myclass %>').remove()
+<% button_class = ".button.#{@tip.id}"%>
+$('<%= button_class %>').remove()
