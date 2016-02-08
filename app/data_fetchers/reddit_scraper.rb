@@ -6,8 +6,7 @@ class RedditScraper
 	attr_accessor :html, :url
 
 	REDDIT_URLS = {
-		# hipster
-		1 => Subreddit.where(theme_id: 1),
+		# not including 1 because that is for programmers which uses a hacker news scraper
 		# clubbing
 		2 => Subreddit.where(theme_id: 2),
 		# gamer
@@ -33,8 +32,6 @@ class RedditScraper
 
   def initialize(theme_id)
   	url = REDDIT_URLS[theme_id].sample.url
-    file = open(url)
-    doc = Nokogiri::HTML(file)
     @html = Nokogiri::HTML(open(url))
   end
 
