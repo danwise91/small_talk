@@ -1,9 +1,11 @@
 <div class="text-center">
-  <h2><%= @theme.name %></h2>
+  <div class="header">
+    <h2><%= @theme.name %></h2>
+  </div>
 </div>
 <div class="text-center">
   <div class="primary">
-    <%= link_to "Refresh Article and Tip", refresh_path(@theme), method: :post, remote: true %>
+    <p><%= link_to "Get New Article and Tip", refresh_path(@theme), method: :post, remote: true %><p>
   </div>
 </div>
 
