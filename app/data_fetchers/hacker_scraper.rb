@@ -20,5 +20,6 @@ class HackerScraper
 				title = post.children[1].children.text unless post.children[1].nil?
 				content_hash[title] = link unless title == nil
 		end
+		content_hash
 	end
 end

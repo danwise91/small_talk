@@ -7,17 +7,26 @@ class ThemesController < ApplicationController
   def show
     @theme = Theme.find(params[:id])
     @tips = Tip.all
-    @content = RedditScraper.new(@theme.id).scrape
+    
+    if @theme.id == 1
+      @content = HackerScraper.new.scrape
+    else
+      @content = RedditScraper.new(@theme.id).scrape
+    end
+
     respond_to do |format|
-      # binding.pry
       format.js { }
-     format.html { }
+      format.html { }
     end
   end
 
   def refresh
     @tips = Tip.all
-    @content = RedditScraper.new(params[:id].to_i).scrape
+    @theme = Theme.find(params[:id])
+    if @theme.id == 1
+      @content = HackerScraper.new.scrape
+    else
+      @content = RedditScraper.new(@theme.id).scrape
+    end
   end
-
 end
