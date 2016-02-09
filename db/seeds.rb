@@ -5,17 +5,17 @@ Subreddit.delete_all
 Tip.delete_all
 
 programmers = Theme.create(id: 1, name: "programmers", category: "networking")
-general = Theme.create(id: 2, name: "general mix", category: "networking")
-gamer = Theme.create(id: 3,name: "gamers", category: "social")
+general = Theme.create(id: 2, name: "general mix", category: "casual")
+gamer = Theme.create(id: 3,name: "gamers", category: "casual")
 coworkers = Theme.create(id: 4, name: "work friends", category: "networking")
 classy_drinkers = Theme.create(id: 5,name: "classy drinkers", category: "social")
 sports_fans = Theme.create(id: 6, name: "sports fans", category: "casual")
-date_night = Theme.create(id: 7, name: "date night", category: "mixer")
-history_nerds = Theme.create(id: 8, name: "history buffs", category: "social")
-science_nerds = Theme.create(id: 9, name: "scientists", category: "social")
-club = Theme.create(id: 10, name: "club pals", category: "mixer")
-hipster = Theme.create(id: 11, name: "hipsters", category: "social")
-suburban = Theme.create(id: 12, name: "suburban citizens", category: "mixer")
+date_night = Theme.create(id: 7, name: "date night", category: "singles")
+history_nerds = Theme.create(id: 8, name: "history buffs", category: "networking")
+science_nerds = Theme.create(id: 9, name: "scientists", category: "networking")
+club = Theme.create(id: 10, name: "club pals", category: "singles")
+hipster = Theme.create(id: 11, name: "hipsters", category: "casual")
+suburban = Theme.create(id: 12, name: "suburban citizens", category: "social")
 
 
 # hipster subreddits
