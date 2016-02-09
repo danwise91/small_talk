@@ -28,6 +28,7 @@ class RedditScraper
 		# pretentious
 		11 => Subreddit.where(theme_id: 11),
 		# suburban living
+		12 => Subreddit.where(theme_id: 12)
 	}
 
   def initialize(theme_id)

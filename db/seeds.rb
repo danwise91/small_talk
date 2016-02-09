@@ -22,25 +22,34 @@ suburban = Theme.create(id: 12, name: "suburban citizens", category: "mixer")
 beard = Subreddit.create(id: 1, url: "https://www.reddit.com/r/BeardTalk", theme: hipster)
 starbucks = Subreddit.create(id: 2, url: "https://www.reddit.com/r/starbucks", theme: hipster)
 #classy drinkers subreddits
+liquor = Subreddit.create(id: 3, url: "https://www.reddit.com/r/liquor", theme: classy_drinkers)
 classic_cocktails = Subreddit.create(id: 4, url: "https://www.reddit.com/r/classiccocktails", theme: classy_drinkers)
+bartender = Subreddit.create(id: 5, url: "https://www.reddit.com/r/bartender/", theme: classy_drinkers)
 #sports fan subreddits
-sports_trivia = Subreddit.create(id: 5, url: "https://www.reddit.com/r/sportstrivia", theme: sports_fans)
+sports_trivia = Subreddit.create(id: 6, url: "https://www.reddit.com/r/sportstrivia", theme: sports_fans)
+hockey = Subreddit.create(id: 7, url: "https://www.reddit.com/r/nhl", theme: sports_fans)
+baseball = Subreddit.create(id: 8, url: "https://www.reddit.com/r/mlb", theme: sports_fans)
+football = Subreddit.create(id: 9, url: "https://www.reddit.com/r/nfl", theme: sports_fans)
+basketball = Subreddit.create(id: 10, url: "https://www.reddit.com/r/nba", theme: sports_fans)
 # date night subreddits
-dating_advice = Subreddit.create(id: 6, url: "https://www.reddit.com/r/dating_advice/", theme: date_night)
+dating_advice = Subreddit.create(id: 11, url: "https://www.reddit.com/r/dating_advice/", theme: date_night)
 #history nerds subreddits
-historyanecdotes = Subreddit.create(id: 7, url: "https://www.reddit.com/r/askhistory", theme: history_nerds)
+historyanecdotes = Subreddit.create(id: 12, url: "https://www.reddit.com/r/askhistory", theme: history_nerds)
 #science nerds subreddits
-til_science = Subreddit.create(id: 8, url: "https://www.reddit.com/r/TILScience", theme: science_nerds)
+til_science = Subreddit.create(id: 13, url: "https://www.reddit.com/r/TILScience", theme: science_nerds)
 #general subreddits
-til = Subreddit.create(id: 9, url: "https://www.reddit.com/r/todayilearned", theme: general)
+til = Subreddit.create(id: 14, url: "https://www.reddit.com/r/fascinating", theme: general)
 # gamer subreddits
-gamer = Subreddit.create(id: 10, url: "https://www.reddit.com/r/aww/", theme: gamer)
+gamer = Subreddit.create(id: 15, url: "https://www.reddit.com/r/gamernews", theme: gamer)
 # clubbing subreddits
-dance = Subreddit.create(id: 11, url: "https://www.reddit.com/r/Dance", theme: club)
+dance = Subreddit.create(id: 16, url: "https://www.reddit.com/r/DanceTutorials", theme: club)
 # coworkers happy hour subreddits
-business = Subreddit.create(id: 12, url: "https://www.reddit.com/r/business/", theme: coworkers)
+business = Subreddit.create(id: 17, url: "https://www.reddit.com/r/business/", theme: coworkers)
+work_life = Subreddit.create(id: 18, url: "https://www.reddit.com/r/work", theme: coworkers)
 # suburban subreddits
-housekeeping = Subreddit.create(id: 13, url: "https://www.reddit.com/r/housekeeping/", theme: suburban)
+cooking = Subreddit.create(id: 19, url: "https://www.reddit.com/r/cooking", theme: suburban)
+housekeeping = Subreddit.create(id: 20, url: "https://www.reddit.com/r/housekeeping/", theme: suburban)
+cool_houses = Subreddit.create(id: 21, url: "https://www.reddit.com/r/unconventionalhomes/", theme: suburban)
 
 Tip.create(url: 'https://google.com', description: 'Your mood is contagious. When you are closed off or nervous, those around you respond to these emotions. Learn to be the one who drives the mood of the moment. As you become comfortable and carefree so will the person you are engaged with. Learn to project your mood onto others.')
 Tip.create(url: 'https://google.com', description: 'Everyone... And I mean everyone, is a person capable of hopes, dreams, anxiousness, compassion, etc. everyone has the potential to be your friend. Go out into the world and embrace this idea. Smile at everyone and be open and friendly. Men, women, fat, fit, young, old. It makes no difference. Just get comfortable being comfortable around everyone.')
