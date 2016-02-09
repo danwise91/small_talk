@@ -1,15 +1,16 @@
-<div class="text-center">
-  <div class="header">
-    <h2><%= @theme.name %></h2>
-  </div>
-</div>
-<div class="text-center">
-  <div class="primary">
-    <p><%= link_to "Get New Article and Tip", refresh_path(@theme), method: :post, remote: true %><p>
-  </div>
-</div>
-
 <div class="container-fluid">
+
+  <div class="text-center">
+    <div class="header">
+      <h2><%= @theme.name %></h2>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="text-center primary" style="margin-top:2em;">
+      <h4><%= link_to "Get New Article and Tip", refresh_path(@theme), method: :post, remote: true %></h4>
+    </div>
+  </div>
 
   <%= render partial: "themes/tipsContent", locals: {tips: @tips, content: @content} %>
 
