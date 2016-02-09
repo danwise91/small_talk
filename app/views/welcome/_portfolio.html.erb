@@ -28,9 +28,9 @@
         <% @themes.each do |theme| %>
           <a href="/themes/<%= theme.id %>">
           <li onclick="" class="item <%= theme.category %> col-sm-4">
-            <div class="border">
+            <div class="border overlay-dark" style="background-color:#000;">
               <!-- Project Thumb -->
-                <%= image_tag "themes/stock#{theme.id}.jpg", class: "img-responsive", alt: "..." %>
+                <%= image_tag "themes/stock#{theme.id}.jpg", class: "img-responsive ig-valencia", alt: "..." %>
               <div class="caption">
                 <h2><%= theme.name %></h2>
               </div>
