@@ -32,6 +32,11 @@ end
       # redirect_to '/', notice: "You have been logged out!"
   end
 
+  def terms
+      @user = User.new
+    #adding terms and conditions to sign up
+  end
+
 private
   def session_params
     params.require(:session).permit(:name, :user_id, :email, :password, :password_confirmation)
