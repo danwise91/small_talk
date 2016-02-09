@@ -1,1 +1,4 @@
-$(".modal-title").html("Please verify information")
+<% @user.errors.full_messages.each do |msg| %>
+var error = "<%= msg %>"
+<% end %>
+$(".modal-title").html(error)

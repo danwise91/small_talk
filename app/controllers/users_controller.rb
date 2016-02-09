@@ -23,6 +23,7 @@ class UsersController < ApplicationController
         format.html { redirect_to root_url  }
       end
     else
+      # binding.pry
       respond_to do |format|
         format.js { }
         format.html { redirect_to root_url  }
