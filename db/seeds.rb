@@ -5,15 +5,15 @@ Subreddit.delete_all
 Tip.delete_all
 
 programmers = Theme.create(id: 1, name: "programmers", category: "networking")
-general = Theme.create(id: 2, name: "general mix", category: "casual")
-gamer = Theme.create(id: 3,name: "gamers", category: "casual")
+general = Theme.create(id: 2, name: "general mix", category: "social")
+gamer = Theme.create(id: 3,name: "gamers", category: "social")
 coworkers = Theme.create(id: 4, name: "work friends", category: "networking")
 classy_drinkers = Theme.create(id: 5,name: "classy drinkers", category: "social")
-sports_fans = Theme.create(id: 6, name: "sports fans", category: "casual")
-date_night = Theme.create(id: 7, name: "date night", category: "singles")
+sports_fans = Theme.create(id: 6, name: "sports fans", category: "social")
+date_night = Theme.create(id: 7, name: "date night", category: "social")
 history_nerds = Theme.create(id: 8, name: "history buffs", category: "networking")
 science_nerds = Theme.create(id: 9, name: "scientists", category: "networking")
-club = Theme.create(id: 10, name: "club pals", category: "singles")
+club = Theme.create(id: 10, name: "club pals", category: "social")
 hipster = Theme.create(id: 11, name: "hipsters", category: "casual")
 suburban = Theme.create(id: 12, name: "suburban citizens", category: "social")
 
