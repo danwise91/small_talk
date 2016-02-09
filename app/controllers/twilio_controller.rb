@@ -54,7 +54,7 @@ class TwilioController < ApplicationController
       @msg = { :message => contact.errors.full_messages, :status => 'ok' }
     end
     respond_to do |format|
-      format.json { render :json => @msg }
+      format.js {  }
     end
   end
 
