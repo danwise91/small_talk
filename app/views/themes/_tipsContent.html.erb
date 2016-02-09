@@ -31,7 +31,11 @@
               <% end %>
 
 
-
+  <% if post_url.include?("comments") %>
+    <% reddit_post_id = post_url.split('/')[-2] %>
+    <% end %>
+    <h3><li><%= link_to formatted_title, post_url, target: "_blank" %></li></h3><br>
+  </div>
               <% if post_url.include?("comments") %>
                 <% reddit_post_id = post_url.split('/')[-2] %>
               <% end %>
