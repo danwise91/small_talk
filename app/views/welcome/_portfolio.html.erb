@@ -28,18 +28,16 @@
 
         <% @themes.each do |theme| %>
           <a href="/themes/<%= theme.id %>">
-            <li onclick="" class="item <%= theme.category %> col-sm-4">
-              <div class="border">
-                <!-- Project Thumb -->
-                  <%= image_tag "themes/stock#{theme.id}.jpg", class: "img-responsive", alt: "..." %>
-                </a>
-
-                <div class="caption">
-                  <h2><%= theme.name %></h2>
-                </div>
+          <li onclick="" class="item <%= theme.category %> col-sm-4">
+            <div class="border">
+              <!-- Project Thumb -->
+                <%= image_tag "themes/stock#{theme.id}.jpg", class: "img-responsive", alt: "..." %>
+              <div class="caption">
+                <h2><%= theme.name %></h2>
               </div>
-            </li>
+            </div>
           </a>
+          </li>
         <% end %>
         <!-- End Item 1 -->
       </ul><!-- /portfolio ul -->

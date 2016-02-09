@@ -5,42 +5,51 @@ Subreddit.delete_all
 Tip.delete_all
 
 programmers = Theme.create(id: 1, name: "programmers", category: "networking")
-general = Theme.create(id: 2, name: "general mix", category: "networking")
-gamer = Theme.create(id: 3,name: "gamers", category: "social")
+general = Theme.create(id: 2, name: "general mix", category: "casual")
+gamer = Theme.create(id: 3,name: "gamers", category: "casual")
 coworkers = Theme.create(id: 4, name: "work friends", category: "networking")
 classy_drinkers = Theme.create(id: 5,name: "classy drinkers", category: "social")
 sports_fans = Theme.create(id: 6, name: "sports fans", category: "casual")
-date_night = Theme.create(id: 7, name: "date night", category: "mixer")
-history_nerds = Theme.create(id: 8, name: "history buffs", category: "social")
-science_nerds = Theme.create(id: 9, name: "scientists", category: "social")
-club = Theme.create(id: 10, name: "club pals", category: "mixer")
-hipster = Theme.create(id: 11, name: "hipsters", category: "social")
-suburban = Theme.create(id: 12, name: "suburban citizens", category: "mixer")
+date_night = Theme.create(id: 7, name: "date night", category: "singles")
+history_nerds = Theme.create(id: 8, name: "history buffs", category: "networking")
+science_nerds = Theme.create(id: 9, name: "scientists", category: "networking")
+club = Theme.create(id: 10, name: "club pals", category: "singles")
+hipster = Theme.create(id: 11, name: "hipsters", category: "casual")
+suburban = Theme.create(id: 12, name: "suburban citizens", category: "social")
 
 
 # hipster subreddits
 beard = Subreddit.create(id: 1, url: "https://www.reddit.com/r/BeardTalk", theme: hipster)
 starbucks = Subreddit.create(id: 2, url: "https://www.reddit.com/r/starbucks", theme: hipster)
 #classy drinkers subreddits
+liquor = Subreddit.create(id: 3, url: "https://www.reddit.com/r/liquor", theme: classy_drinkers)
 classic_cocktails = Subreddit.create(id: 4, url: "https://www.reddit.com/r/classiccocktails", theme: classy_drinkers)
+bartender = Subreddit.create(id: 5, url: "https://www.reddit.com/r/bartender/", theme: classy_drinkers)
 #sports fan subreddits
-sports_trivia = Subreddit.create(id: 5, url: "https://www.reddit.com/r/sportstrivia", theme: sports_fans)
+sports_trivia = Subreddit.create(id: 6, url: "https://www.reddit.com/r/sportstrivia", theme: sports_fans)
+hockey = Subreddit.create(id: 7, url: "https://www.reddit.com/r/nhl", theme: sports_fans)
+baseball = Subreddit.create(id: 8, url: "https://www.reddit.com/r/mlb", theme: sports_fans)
+football = Subreddit.create(id: 9, url: "https://www.reddit.com/r/nfl", theme: sports_fans)
+basketball = Subreddit.create(id: 10, url: "https://www.reddit.com/r/nba", theme: sports_fans)
 # date night subreddits
-dating_advice = Subreddit.create(id: 6, url: "https://www.reddit.com/r/dating_advice/", theme: date_night)
+dating_advice = Subreddit.create(id: 11, url: "https://www.reddit.com/r/dating_advice/", theme: date_night)
 #history nerds subreddits
-historyanecdotes = Subreddit.create(id: 7, url: "https://www.reddit.com/r/askhistory", theme: history_nerds)
+historyanecdotes = Subreddit.create(id: 12, url: "https://www.reddit.com/r/askhistory", theme: history_nerds)
 #science nerds subreddits
-til_science = Subreddit.create(id: 8, url: "https://www.reddit.com/r/TILScience", theme: science_nerds)
+til_science = Subreddit.create(id: 13, url: "https://www.reddit.com/r/TILScience", theme: science_nerds)
 #general subreddits
-til = Subreddit.create(id: 9, url: "https://www.reddit.com/r/todayilearned", theme: general)
+til = Subreddit.create(id: 14, url: "https://www.reddit.com/r/fascinating", theme: general)
 # gamer subreddits
-gamer = Subreddit.create(id: 10, url: "https://www.reddit.com/r/aww/", theme: gamer)
+gamer = Subreddit.create(id: 15, url: "https://www.reddit.com/r/gamernews", theme: gamer)
 # clubbing subreddits
-dance = Subreddit.create(id: 11, url: "https://www.reddit.com/r/Dance", theme: club)
+dance = Subreddit.create(id: 16, url: "https://www.reddit.com/r/DanceTutorials", theme: club)
 # coworkers happy hour subreddits
-business = Subreddit.create(id: 12, url: "https://www.reddit.com/r/business/", theme: coworkers)
+business = Subreddit.create(id: 17, url: "https://www.reddit.com/r/business/", theme: coworkers)
+work_life = Subreddit.create(id: 18, url: "https://www.reddit.com/r/work", theme: coworkers)
 # suburban subreddits
-housekeeping = Subreddit.create(id: 13, url: "https://www.reddit.com/r/housekeeping/", theme: suburban)
+cooking = Subreddit.create(id: 19, url: "https://www.reddit.com/r/cooking", theme: suburban)
+housekeeping = Subreddit.create(id: 20, url: "https://www.reddit.com/r/housekeeping/", theme: suburban)
+cool_houses = Subreddit.create(id: 21, url: "https://www.reddit.com/r/unconventionalhomes/", theme: suburban)
 
 Tip.create(url: 'https://google.com', description: 'Your mood is contagious. When you are closed off or nervous, those around you respond to these emotions. Learn to be the one who drives the mood of the moment. As you become comfortable and carefree so will the person you are engaged with. Learn to project your mood onto others.')
 Tip.create(url: 'https://google.com', description: 'Everyone... And I mean everyone, is a person capable of hopes, dreams, anxiousness, compassion, etc. everyone has the potential to be your friend. Go out into the world and embrace this idea. Smile at everyone and be open and friendly. Men, women, fat, fit, young, old. It makes no difference. Just get comfortable being comfortable around everyone.')
@@ -69,5 +78,5 @@ Tip.create(url: 'https://gretchenrubin.com/happiness_project/2009/05/seven-tips-
 Tip.create(url: 'https://gretchenrubin.com/happiness_project/2009/05/seven-tips-for-making-good-conversation-with-a-stranger/', description: 'Comment on a topic of general interest. A friend scans Google News right before he goes anywhere where he needs to make small talk, so he can say, “Did you hear that Justice Souter is stepping down from the bench?” or whatever might be happening.')
 Tip.create(url: 'https://gretchenrubin.com/happiness_project/2009/05/seven-tips-for-making-good-conversation-with-a-stranger/', description: 'Ask open questions that can’t be answered with a single word.')
 Tip.create(url: 'https://gretchenrubin.com/happiness_project/2009/05/seven-tips-for-making-good-conversation-with-a-stranger/', description: 'If you do ask a question that can be answered in a single word, instead of just supplying your own information in response, ask a follow-up question.')
-Tip.create(url: 'https://gretchenrubin.com/happiness_project/2009/05/seven-tips-for-making-good-conversation-with-a-stranger/', description: 'React to what a person says in the spirit in which that that comment was offered. If he makes a joke, even if it’s not very funny, try to laugh.')
+Tip.create(url: 'https://gretchenrubin.com/happiness_project/2009/05/seven-tips-for-making-good-conversation-with-a-stranger/', description: 'React to what a person says in the spirit in which that comment was offered. If he makes a joke, even if it’s not very funny, try to laugh.')
 Tip.create(url: 'http://www.efficientlifeskills.com/a-simple-conversation-secret-to-making-people-instantly-feel-good-about-you/', description: 'You can easily do this by asking questions that communicate you care. For example: Go deeper than just a “What do you do?” question. Instead ask questions like: How did you get started? What do you enjoy most? ßWhat is exciting you most? Tell me more about that.')

@@ -2,12 +2,14 @@ class ThemesController < ApplicationController
 
   def index
     @themes = Theme.all
+    @user = User.new
   end
 
   def show
+    @user = User.new
     @theme = Theme.find(params[:id])
     @tips = Tip.all
-    
+
     if @theme.id == 1
       @content = HackerScraper.new.scrape
     else
@@ -21,6 +23,7 @@ class ThemesController < ApplicationController
   end
 
   def refresh
+    @user = User.new
     @tips = Tip.all
 
     @theme = Theme.find(params[:id])

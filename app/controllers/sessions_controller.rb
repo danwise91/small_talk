@@ -27,6 +27,7 @@ end
 
   def destroy
     session[:user_id] = nil
+    @user = User.new
     redirect_to root_path
       # redirect_to '/', notice: "You have been logged out!"
   end
