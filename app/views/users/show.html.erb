@@ -2,38 +2,39 @@
 	<div class="header">
 		<div class="row">
 			<!-- Page Title -->
-				<div class="text-center">
-					<p><h2>Welcome <%="#{current_user.name}"%></p></h2>
+			<div class="text-center">
+				<p><h2>Welcome <%="#{current_user.name}"%></p></h2>
+			</div>
+		</div>
+	</div><!-- /row -->
+
+
+	<div class="row mt20 tipsList">
+		<!-- 3 Column Title -->
+
+
+		<% current_user.tips.each do |tip| -%>
+
+		<!-- Content interation -->
+		<div class="col-sm-4 text-center" id="<%=tip.id%>">
+			<div class="content-box content-box-bordered">
+				<p><%= tip.description %></p>
+				<div class="button <%=tip.id%>">
+					<%=link_to "Remove tip", delete_tip_path(current_user, tip_id: tip.id), method: :post, remote: true%>
 				</div>
 			</div>
-		</div><!-- /row -->
+		</div>
+		<% end -%>
 
-
-		<div class="row mt20 tipsList">
-			<!-- 3 Column Title -->
-
-
-			<% current_user.tips.each do |tip| -%>
-
-			<!-- Content interation -->
-			<div class="col-sm-4 text-center" id="<%=tip.id%>">
-				<div class="content-box content-box-bordered">
-					<p><%= tip.description %></p>
-					<div class="button <%=tip.id%>">
-						<%=link_to "Remove tip", delete_tip_path(current_user, tip_id: tip.id), method: :post, remote: true%>
-					</div>
-				</div>
+		<!-- Content Link -->
+		<div class="col-sm-4 text-center">
+			<div class="content-box content-box-bordered">
+				<h4 class="pt15">Save some tips to view them here!</h4>
+				<p class="no-margin"><%= link_to "View a random tip", '../themes/10' %></p>
 			</div>
-			<% end -%>
-
-			<!-- Content Link -->
-			<div class="col-sm-4 text-center">
-				<div class="content-box content-box-bordered">
-					<h4 class="pt15">Save some tips to view them here!</h4>
-					<p class="no-margin"><%= link_to "View a random tip", '../themes/10' %></p>
-				</div>
-			</div>
+		</div>
+	</div>
 
 
 
-		</div><!-- /container -->
+	</div><!-- /container -->
