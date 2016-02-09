@@ -9,13 +9,13 @@
   <% if post_url.include?("comments") %>
     <% reddit_post_id = post_url.split('/')[-2] %>
     <% end %>
-    <li><%= link_to formatted_title, post_url, target: "_blank" %></li><br>
+    <h3><li><%= link_to formatted_title, post_url, target: "_blank" %></li></h3><br>
   </div>
 
   <div class="mt15" style="width: 100%;">
   <% tip = tips.sample %>
   <strong>Tip:</strong>
-  <li><%=tip.description %></li>
+  <h3><li><%=tip.description %></li></h3>
     <div class="text-left">
       <div class="mt15" id="save_tip">
         <% if logged_in? && current_user.tips.include?(tip) %>
