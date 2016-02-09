@@ -39,6 +39,7 @@ class UsersController < ApplicationController
 
   def delete_tip
     @tip = Tip.find(params[:tip_id])
+    @tip_id = @tip.id
     current_user.tips.destroy(@tip)
     respond_to do |format|
       format.js { }
