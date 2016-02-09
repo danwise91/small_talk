@@ -8,20 +8,21 @@
             <div class="modal-body">
               <%= form_for @user, url: 'users#create' do |f| %>
               <div class="form-group name">
-              <%= f.text_field :name, class: 'form-control', autofocus: true, placeholder: "Your Name"%><br>
+                <%= f.label :name, 'Name' %>
+                <%= f.text_field :name, class: 'form-control', autofocus: true, placeholder: "Your Name"%><br>
             </div>
 
                 <div class="form-group email">
-                  <%= f.label :email, 'email: ' %>
-                  <%= f.text_field :email, class: 'form-control', autofocus: true, placeholder: "email"%><br>
+                  <%= f.label :email, 'Email: ' %>
+                  <%= f.text_field :email, class: 'form-control', autofocus: true, placeholder: "Email"%><br>
                 </div>
                 <div class="form-group password">
-                  <%= f.label :password, 'password: ' %>
+                  <%= f.label :password, 'Password: ' %>
                   <%= f.password_field :password, class: 'form-control', autofocus: true, placeholder: "Must be 8-15 characters"%><br>
                 </div>
                 <div class="form-group password">
-                  <%= f.label :password, 'password: ' %>
-                  <%= f.password_field :password, class: 'form-control', autofocus: true, placeholder: "Please confirm"%><br>
+                  <%= f.label :password, 'Confirm Password: ' %>
+                  <%= f.password_field :password, class: 'form-control', autofocus: true, placeholder: "Confirm Password"%><br>
                 </div>
             </div>
             By creating an account, you are agreeing with our <a href="/terms">Terms and Conditions</a>
@@ -31,4 +32,4 @@
             <% end %><!-- /form -->
         </div><!-- /modal content -->
     </div><!-- /modal dialog -->
-</div><!-- /modal holder -->
+</div>

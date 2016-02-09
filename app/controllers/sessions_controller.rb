@@ -13,16 +13,21 @@ class SessionsController < ApplicationController
     else
       @user = User.find_by(email: params[:user][:email])
       if @user && @user.authenticate(params[:user][:password])
-        session[:user_id] = @user.id
-        redirect_to '/'
+          session[:user_id] = @user.id
+          respond_to do |format|
+            format.js { render inline: "location.reload();" }
+            format.html { redirect_to root_url  }
+          end
       else
-
         @user = User.new
-        flash.now[:error] = "Bad Username or Password"
-        render :new
+        respond_to do |format|
+          format.js { }
+          format.html { redirect_to root_url  }
+        end
+
       end
+    end
   end
-end
 
 
   def destroy
