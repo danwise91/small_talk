@@ -17,7 +17,11 @@
     display: block;
     color: #fff;
     -webkit-font-smoothing: antialiased;
-    text-shadow: 2px 2px #000;
     margin-right: 10%;
     margin-bottom: 10%;
+}
+
+.ig-valencia {
+  -webkit-filter: brightness(0.75)  sepia(0.25) opacity(0.95) saturate(1.25) contrast(0.9) hue-rotate(-25deg);
+  filter: sepia(0.25) saturate(1.25) contrast(0.9) opacity(0.95) hue-rotate(-25deg);
 }
