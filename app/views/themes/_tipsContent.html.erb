@@ -24,7 +24,13 @@
               <% post_title = content.keys.sample %>
               <% post_url = content[post_title] %>
               <% formatted_title = post_title.gsub(/TIL/, "") %>
-              <% formatted_title[0].upcase %>
+              <% if formatted_title[0] == 'that' || formatted_title[0] == " "%>
+                <%formatted_title = formatted_title.gsub(/that/, "").gsub(/" "/, "") %>
+              <% elsif formatted_title[0] == 'That' || formatted_title[0] == " " %>
+                <% formatted_title = formatted_title.gsub(/That/, "").gsub(/" "/, "") %>
+              <% end %>
+
+
 
               <% if post_url.include?("comments") %>
                 <% reddit_post_id = post_url.split('/')[-2] %>
