@@ -1,32 +1,54 @@
  <ul id="refresh">
   <div class="" style="width: 100%;">
-  <strong>Conversation Starter:</strong>
-  <% post_title = content.keys.sample %>
-  <% post_url = content[post_title] %>
-  <% formatted_title = post_title.gsub(/TIL/, "") %>
-  <% formatted_title[0].upcase! %>
+    <div class="col-lg-6 col-md-6 col-sm-4">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title"><strong>Tip:<strong></h3>
+                    <div class="mt15" style="width: 100%;">
+                      <div class="panel panel-default">
+                        <div class="panel-body">
+                          <% tip = tips.sample %>
+                          <h3><%=tip.description%></h3>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+    <div class="" style="width: 100%;">
+      <div class="col-lg-6 col-md-6 col-sm-6">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title"><strong>Conversation Starter:</strong></h3>
+            <div class="mt15" style="width: 100%;">
+              <% post_title = content.keys.sample %>
+              <% post_url = content[post_title] %>
+              <% formatted_title = post_title.gsub(/TIL/, "") %>
+              <% formatted_title[0].upcase %>
 
-  <% if post_url.include?("comments") %>
-    <% reddit_post_id = post_url.split('/')[-2] %>
-    <% end %>
-    <h3><li><%= link_to formatted_title, post_url, target: "_blank" %></li><br></h3>
-  </div>
-
-  <div class="mt15" style="width: 100%;">
-  <% tip = tips.sample %>
-  <strong>Tip:</strong>
-  <h3><li><%=tip.description %></li></h3>
+              <% if post_url.include?("comments") %>
+                <% reddit_post_id = post_url.split('/')[-2] %>
+              <% end %>
+                <div class="panel panel-default">
+                  <div class="panel-body">
+                    <h3><%= link_to formatted_title, post_url, target: "_blank" %><br></h3>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     <div class="text-left">
       <div class="mt15" id="save_tip">
         <% if logged_in? && current_user.tips.include?(tip) %>
-        <h4><%="Tip already saved"%></h4>
+          <h4><%="Tip already saved"%></h4>
         <% elsif logged_in?%>
           <h4><%= link_to "Save Tip", edit_user_path(current_user, tip_id: tip.id), remote: true, method: :post%></h4>
-          <% else %>
+        <% else %>
             <h4><%= link_to "Log in or Sign up to save tips", new_user_path%></h4>
-
         <% end %>
       </div>
     </div>
   </div>
-  </ul>
+</ul>
