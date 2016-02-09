@@ -1,30 +1,34 @@
-<div class="modal fade" id="login" tabindex="-1" role="dialog" aria-labelledby="loginLabel" aria-hidden="true">
+<div class="modal fade" id="signup" tabindex="-1" role="dialog" aria-labelledby="signupLabel" aria-hidden="true">
     <div class="modal-dialog modal-sm">
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
-                <h4 class="modal-title" id="loginLabel">Login</h4>
+                <h4 class="modal-title" id="signupLabel">Sign Up</h4>
             </div>
             <div class="modal-body">
-              <form role="form">
-                <div class="form-group">
-                    <label for="exampleInputEmail1">Email address</label>
-                    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
-                </div>
-                <div class="form-group">
-                    <label for="exampleInputPassword1">Password</label>
-                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-                </div>
-                <div class="checkbox">
-                    <label>
-                        <input type="checkbox"> Do you flex?
-                    </label>
-                </div>
-            </form><!-- /form -->
+              <%= form_for @user, url: 'users#create' do |f| %>
+              <div class="form-group name">
+              <%= f.text_field :name, class: 'form-control', autofocus: true, placeholder: "Your Name"%><br>
             </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-rw btn-primary">Login</button>
+
+                <div class="form-group email">
+                  <%= f.label :email, 'email: ' %>
+                  <%= f.text_field :email, class: 'form-control', autofocus: true, placeholder: "email"%><br>
+                </div>
+                <div class="form-group password">
+                  <%= f.label :password, 'password: ' %>
+                  <%= f.password_field :password, class: 'form-control', autofocus: true, placeholder: "Must be 8-15 characters"%><br>
+                </div>
+                <div class="form-group password">
+                  <%= f.label :password, 'password: ' %>
+                  <%= f.password_field :password, class: 'form-control', autofocus: true, placeholder: "Please confirm"%><br>
+                </div>
             </div>
+            By creating an account, you are agreeing with our <a href="/terms">Terms and Conditions</a>
+                <div class="actions">
+                    <%= f.submit "Sign Up",  class: "btn btn-primary", style: "width: 300px" %>
+                </div>
+            <% end %><!-- /form -->
         </div><!-- /modal content -->
     </div><!-- /modal dialog -->
 </div><!-- /modal holder -->
