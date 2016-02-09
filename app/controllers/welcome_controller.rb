@@ -6,15 +6,19 @@ class WelcomeController < ApplicationController
   end
 
   def mission
+    @user = User.new
   end
 
   def support
+    @user = User.new
   end
 
   def request_form
+    @user = User.new
   end
 
   def careers
+    @user = User.new
   end
 
 

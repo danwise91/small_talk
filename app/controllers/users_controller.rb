@@ -25,14 +25,15 @@ class UsersController < ApplicationController
   end
 
   def edit
+    @user = set_user
     tip = Tip.find(params[:tip_id])
     unless current_user.tips.include?(tip)
       current_user.tips.push(tip)
       current_user.save
+    end
     respond_to do |format|
       format.js { }
       format.html { redirect_to root_url  }
-    end
     end
   end
 
@@ -47,6 +48,7 @@ class UsersController < ApplicationController
 
   def destroy
       @user.destroy
+      @user = User.new
       respond_to do |format|
         format.html { redirect_to users_url }
         format.json { head :no_content }
