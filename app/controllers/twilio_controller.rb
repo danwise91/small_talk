@@ -23,8 +23,10 @@ class TwilioController < ApplicationController
     contact = Contact.new
     contact.phone = params[:phone]
 
-    # Validate contact
+    # Validate contact --- Validate method broke, assume true
+    # if contact.validate!
       if true
+
       MakeCallJob.set(wait_until: time.minutes.from_now).perform_later(contact.phone, @@twilio_connect_url)
       # Lets respond to the ajax call with some positive reinforcement
       @msg = { :message => 'Phone call incoming!', :status => 'ok' }
