@@ -10,11 +10,7 @@ class ThemesController < ApplicationController
     @theme = Theme.find(params[:id])
     @tips = Tip.all
 
-    if @theme.id == 1
-      @content = HackerScraper.new.scrape
-    else
-      @content = RedditScraper.new(@theme.id).scrape
-    end
+    scrape_conversation_starters
 
     respond_to do |format|
       format.js { }
@@ -27,11 +23,16 @@ class ThemesController < ApplicationController
     @tips = Tip.all
 
     @theme = Theme.find(params[:id])
+
+    scrape_conversation_starters
+  end
+
+  def scrape_conversation_starters
     if @theme.id == 1
       @content = HackerScraper.new.scrape
     else
       @content = RedditScraper.new(@theme.id).scrape
+      @articles = @content.to_a.sample(5).to_h
     end
-
   end
 end
