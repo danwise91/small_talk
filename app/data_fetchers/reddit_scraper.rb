@@ -37,20 +37,17 @@ class RedditScraper
   end
 
   def scrape
-  	content_hash = {}
-
-  	self.html.css(".title").each_with_index do |post, index|
-  		if post.name == "p" && index > 3
-	  		link = post.children[0].attributes["href"].value
-	  		# binding.pry
-	  		if link[0..2] == "/r/"
-	  			link = link.prepend("https://www.reddit.com")
-	  		end
-	  		title = post.children[0].text
-	  		content_hash[title] = link
-	  	end
-
-  	end
+  	content_hash = {} 
+	  	self.html.css(".title").each_with_index do |post, index|
+	  		if post.name == "p" && index > 3
+		  		link = post.children[0].attributes["href"].value
+		  		if link[0..2] == "/r/"
+		  			link = link.prepend("https://www.reddit.com")
+		  		end
+		  		title = post.children[0].text
+		  		content_hash[title] = link
+			end
+	  end
 		content_hash
-  end
+	end
 end
