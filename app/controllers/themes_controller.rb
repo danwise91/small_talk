@@ -21,7 +21,6 @@ class ThemesController < ApplicationController
   def refresh
     @user = User.new
     @tips = Tip.all
-
     @theme = Theme.find(params[:id])
 
     scrape_conversation_starters
@@ -30,6 +29,7 @@ class ThemesController < ApplicationController
   def scrape_conversation_starters
     if @theme.id == 1
       @content = HackerScraper.new.scrape
+      @articles = @content.to_a.sample(5).to_h
     else
       @content = RedditScraper.new(@theme.id).scrape
       @articles = @content.to_a.sample(5).to_h
